@@ -1,49 +1,116 @@
-/* aleclagarde.com — portada y listado de apps (cada app lleva su propio estilo) */
+/* aleclagarde.com — web personal (las apps llevan su propio estilo). */
 :root {
-  --fondo: #f7f7f4;
-  --texto: #121212;
-  --suave: #6b6b66;
-  --linea: #dcdcd5;
-  --acento: #ff5a1f;
-  --tarjeta: #ffffff;
-  --mono: 'IBM Plex Mono', ui-monospace, monospace;
-  --sans: 'IBM Plex Sans', system-ui, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --fondo: #111210; --texto: #ecece6; --suave: #9a9a92; --linea: #2c2d29; --tarjeta: #191a17; }
+  --papel: #f5f4ef;
+  --blanco: #ffffff;
+  --tinta: #0f1218;
+  --gris: #5b616e;
+  --linea: #d9d8d1;
+  --azul: #1f3fd1;       /* cobalto */
+  --azul-claro: #e6eafc;
+  --sans: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --ancho: 1080px;
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--fondo); color: var(--texto); font: 400 18px/1.6 var(--sans); }
-main { max-width: 760px; margin: 0 auto; padding: 32px 16px 72px; }
-a { color: inherit; text-decoration-color: var(--acento); text-underline-offset: 4px; text-decoration-thickness: 2px; }
-a:hover { color: var(--acento); }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--papel); color: var(--tinta); font: 400 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+.envoltura { max-width: var(--ancho); margin: 0 auto; padding: 0 20px; }
 
-.cabecera { display: flex; justify-content: space-between; align-items: center; gap: 12px; font: 500 13px/1 var(--mono); }
-.marca { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
-.marca i { width: 14px; height: 14px; background: var(--acento); display: inline-block; }
-.idiomas a { text-decoration: none; color: var(--suave); margin-left: 12px; }
-.idiomas a[aria-current] { color: var(--texto); }
+/* Barra */
+.barra { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--papel) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--linea); }
+.barra .envoltura { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.marca { display: flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; letter-spacing: -0.01em; }
+.monograma { width: 30px; height: 30px; background: var(--azul); color: #fff; display: grid; place-items: center; font: 700 13px/1 var(--sans); letter-spacing: 0.02em; }
+.barra nav { display: flex; align-items: center; gap: 24px; font-size: 15px; }
+.barra nav a { text-decoration: none; color: var(--gris); }
+.barra nav a:hover { color: var(--tinta); }
+.idiomas { font: 500 12px/1 var(--mono); }
+.idiomas a { color: var(--gris); text-decoration: none; margin-left: 6px; }
+.idiomas a[aria-current] { color: var(--azul); }
 
-h1 { font: 600 clamp(48px, 12vw, 96px)/0.95 var(--sans); letter-spacing: -0.04em; margin: 88px 0 20px; }
-.rol { font-size: clamp(20px, 3.4vw, 26px); line-height: 1.4; max-width: 30ch; color: var(--texto); margin: 0; }
-.rol b { font-weight: 500; box-shadow: inset 0 -0.35em 0 color-mix(in srgb, var(--acento) 30%, transparent); }
+/* Portada */
+.portada { padding: 88px 0 72px; display: grid; grid-template-columns: 1.6fr 1fr; gap: 56px; align-items: end; }
+.antetitulo { font: 500 13px/1 var(--mono); color: var(--azul); text-transform: uppercase; letter-spacing: 0.12em; margin: 0 0 22px; }
+.portada h1 { font-size: clamp(54px, 9vw, 112px); line-height: 0.92; font-weight: 800; letter-spacing: -0.045em; margin: 0; }
+.portada h1 span { color: var(--azul); }
+.lema { font-size: clamp(19px, 2.2vw, 23px); line-height: 1.45; margin: 28px 0 0; max-width: 34ch; }
+.botones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.boton { display: inline-flex; align-items: center; gap: 8px; padding: 14px 20px; font-weight: 600; font-size: 16px; text-decoration: none; border: 2px solid var(--tinta); transition: transform .15s, box-shadow .15s; }
+.boton.lleno { background: var(--azul); border-color: var(--azul); color: #fff; }
+.boton:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--tinta); }
+.ficha { background: var(--blanco); border: 2px solid var(--tinta); box-shadow: 8px 8px 0 var(--azul); padding: 22px 24px; }
+.ficha dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 10px 18px; font-size: 15px; }
+.ficha dt { font: 500 12px/1.9 var(--mono); color: var(--gris); text-transform: uppercase; letter-spacing: 0.06em; }
+.ficha dd { margin: 0; font-weight: 600; }
+.ficha .ahora { display: inline-flex; align-items: center; gap: 8px; }
+.ficha .ahora::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #18a058; box-shadow: 0 0 0 3px #d5f2e1; }
 
-section { margin-top: 80px; }
-.titulo { display: flex; gap: 14px; align-items: baseline; font: 500 13px/1 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--suave); border-bottom: 1px solid var(--linea); padding-bottom: 12px; margin: 0 0 8px; }
-.titulo span { color: var(--acento); }
+/* Secciones */
+section.bloque { padding: 72px 0; border-top: 1px solid var(--linea); }
+.cabeza-bloque { display: grid; grid-template-columns: 280px 1fr; gap: 40px; }
+.cabeza-bloque h2 { font-size: 34px; line-height: 1.05; letter-spacing: -0.03em; margin: 0; font-weight: 800; }
+.cabeza-bloque h2 small { display: block; font: 500 13px/1 var(--mono); color: var(--azul); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
 
-.app { display: grid; grid-template-columns: 64px 1fr auto; gap: 18px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--linea); text-decoration: none; }
-.app img { width: 64px; height: 64px; border-radius: 15px; }
-.app strong { display: block; font: 600 22px/1.2 var(--sans); letter-spacing: -0.01em; }
-.app small { color: var(--suave); font-size: 16px; line-height: 1.4; display: block; }
-.app em { font: 500 12px/1 var(--mono); font-style: normal; color: var(--suave); border: 1px solid var(--linea); padding: 6px 8px; white-space: nowrap; }
-.app:hover strong { color: var(--acento); }
+/* Experiencia */
+.trayectoria { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--tinta); }
+.trayectoria li { position: relative; padding: 0 0 36px 28px; }
+.trayectoria li:last-child { padding-bottom: 0; }
+.trayectoria li::before { content: ''; position: absolute; left: -8px; top: 6px; width: 14px; height: 14px; background: var(--papel); border: 2px solid var(--tinta); }
+.trayectoria li.actual::before { background: var(--azul); border-color: var(--azul); }
+.fecha { font: 500 13px/1.6 var(--mono); color: var(--gris); }
+.trayectoria h3 { font-size: 21px; line-height: 1.3; margin: 2px 0 2px; letter-spacing: -0.01em; }
+.trayectoria h3 span { color: var(--azul); }
+.trayectoria ul { margin: 10px 0 0; padding-left: 18px; color: #2a2f3a; }
+.trayectoria ul li { padding: 0; margin: 4px 0; }
+.trayectoria ul li::before { display: none; }
+.etiquetas { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.etiquetas span { font: 500 12px/1 var(--mono); padding: 6px 8px; background: var(--azul-claro); color: var(--azul); }
 
-.contacto { font: 500 clamp(20px, 4vw, 28px)/1.3 var(--sans); }
-.nota { color: var(--suave); font-size: 16px; }
-footer { margin-top: 96px; font: 400 13px/1.6 var(--mono); color: var(--suave); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+/* Formación y habilidades */
+.rejilla { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.caja { background: var(--blanco); border: 1px solid var(--linea); padding: 22px 24px; }
+.caja h3 { font-size: 18px; margin: 6px 0 4px; line-height: 1.35; }
+.caja p { margin: 0; color: var(--gris); font-size: 15px; }
+.caja .fecha { color: var(--azul); }
+.habilidades { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.habilidades .caja h3 { font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--gris); margin: 0 0 10px; }
+.habilidades .caja p { color: var(--tinta); font-size: 16px; font-weight: 500; }
+
+/* Apps */
+.app { display: grid; grid-template-columns: 72px 1fr auto; gap: 20px; align-items: center; background: var(--blanco); border: 2px solid var(--tinta); padding: 18px 22px; text-decoration: none; transition: transform .15s, box-shadow .15s; }
+.app:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--azul); }
+.app img { width: 72px; height: 72px; border-radius: 16px; }
+.app strong { display: block; font-size: 22px; letter-spacing: -0.01em; }
+.app small { display: block; color: var(--gris); font-size: 15px; line-height: 1.45; }
+.app em { font: 500 12px/1 var(--mono); font-style: normal; border: 1px solid var(--linea); padding: 6px 8px; color: var(--gris); }
+
+/* Contacto */
+.contacto { background: var(--azul); color: #fff; padding: 72px 0; }
+.contacto .envoltura { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; }
+.contacto h2 { font-size: clamp(36px, 5vw, 56px); line-height: 1; letter-spacing: -0.035em; margin: 0; font-weight: 800; }
+.contacto p { margin: 16px 0 0; font-size: 18px; opacity: 0.9; max-width: 40ch; }
+.contacto .botones { justify-content: flex-end; margin: 0; }
+.contacto .boton { border-color: #fff; color: #fff; }
+.contacto .boton.lleno { background: #fff; color: var(--azul); }
+.contacto .boton:hover { box-shadow: 4px 4px 0 var(--tinta); }
+
+footer { padding: 28px 0 40px; font: 400 13px/1.6 var(--mono); color: var(--gris); }
+footer .envoltura { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 footer a { text-decoration: none; }
 
+/* Idiomas */
 html[data-idioma="es"] [lang="en"]:not(html),
 html[data-idioma="en"] [lang="es"]:not(html) { display: none !important; }
-@media (max-width: 480px) { .app { grid-template-columns: 52px 1fr; } .app img { width: 52px; height: 52px; border-radius: 12px; } .app em { display: none; } h1 { margin-top: 56px; } }
+
+@media (max-width: 860px) {
+  .barra nav .secc { display: none; }
+  .portada { grid-template-columns: 1fr; padding: 56px 0 56px; gap: 40px; }
+  .cabeza-bloque, .rejilla, .habilidades, .contacto .envoltura { grid-template-columns: 1fr; }
+  .cabeza-bloque { gap: 28px; }
+  section.bloque { padding: 56px 0; }
+  .contacto .botones { justify-content: flex-start; }
+  .app { grid-template-columns: 56px 1fr; }
+  .app img { width: 56px; height: 56px; border-radius: 13px; }
+  .app em { display: none; }
+}
