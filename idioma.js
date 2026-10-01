@@ -8,10 +8,12 @@
   document.documentElement.lang = i;
   document.addEventListener('DOMContentLoaded', function () {
     // Los enlaces internos conservan el idioma elegido.
-    if (p) document.querySelectorAll('a[href^="/"]').forEach(function (a) {
-      if (!a.hasAttribute('data-lang')) a.href += (a.href.indexOf('?') < 0 ? '?' : '&') + 'lang=' + p;
+    if (p) document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (a.hasAttribute('data-lang') || /^(https?:|mailto:|#|\?)/.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') < 0 ? '?' : '&') + 'lang=' + p);
     });
-    document.querySelectorAll('.idiomas a').forEach(function (a) {
+    document.querySelectorAll('[data-lang]').forEach(function (a) {
       if (a.getAttribute('data-lang') === i) a.setAttribute('aria-current', 'true');
     });
   });
