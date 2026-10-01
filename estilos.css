@@ -1,0 +1,66 @@
+/* aleclagarde.com — mismo papel y tinta que Pasati */
+:root {
+  --papel: #f4f1e8;
+  --blanco: #fbfaf5;
+  --tinta: #151515;
+  --gris: #6e6a62;
+  --raya: #d4cec0;
+  --marcador: #f6d32d;
+  --serif: 'Newsreader', Georgia, serif;
+  --sans: 'Libre Franklin', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --papel: #161513; --blanco: #1e1d1a; --tinta: #efebe0; --gris: #a39d90; --raya: #3a3731; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font: 19px/1.55 var(--serif);
+}
+main { max-width: 680px; margin: 0 auto; padding: 28px 16px 64px; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { background: var(--marcador); color: #151515; }
+
+.barra { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.etiqueta { font: 700 12px/1.4 var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris); }
+.etiqueta a { text-decoration: none; }
+.idiomas a { text-decoration: none; margin-left: 10px; }
+.idiomas a[aria-current] { color: var(--tinta); text-decoration: underline; }
+
+h1 { font: italic 700 clamp(44px, 10vw, 72px)/1.02 var(--serif); letter-spacing: -0.02em; margin: 18px 0 10px; }
+h2 { font: 700 13px/1.4 var(--sans); letter-spacing: 0.12em; text-transform: uppercase; border-top: 3px solid var(--tinta); padding-top: 10px; margin: 40px 0 12px; }
+h3 { font: 600 21px/1.3 var(--serif); margin: 26px 0 6px; }
+.doble { border: 0; border-top: 3px solid var(--tinta); border-bottom: 1px solid var(--tinta); height: 5px; margin: 0 0 22px; }
+.entradilla { font-size: 22px; line-height: 1.45; }
+.nota { color: var(--gris); font-style: italic; font-size: 17px; }
+ul { padding-left: 1.1em; }
+li { margin: 4px 0; }
+
+.ficha {
+  display: flex; gap: 16px; align-items: center;
+  border: 1px solid var(--tinta); background: var(--blanco);
+  padding: 14px; text-decoration: none; margin: 12px 0;
+}
+.ficha img { width: 64px; height: 64px; border-radius: 14px; flex: none; }
+.ficha strong { font: 600 24px/1.2 var(--serif); display: block; }
+.ficha span { display: block; color: var(--gris); font-size: 16px; line-height: 1.35; margin-top: 2px; }
+
+.boton {
+  display: inline-block; font: 700 14px/1 var(--sans); letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--tinta); color: var(--papel); padding: 16px 22px; text-decoration: none; margin: 8px 8px 0 0;
+}
+.boton.hueco { background: transparent; color: var(--tinta); border: 1px solid var(--tinta); }
+.boton:hover { background: var(--marcador); color: #151515; }
+
+.juegos { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0; border: 1px solid var(--tinta); background: var(--blanco); }
+.juegos div { padding: 10px 12px; border-bottom: 1px solid var(--raya); font-size: 17px; }
+.juegos b { font-weight: 600; }
+
+footer { display: block; margin-top: 56px; border-top: 1px solid var(--tinta); padding-top: 12px; }
+
+/* Bilingüe: cada bloque lleva lang="es" o lang="en" y se enseña uno. */
+html[data-idioma="es"] [lang="en"]:not(html),
+html[data-idioma="en"] [lang="es"]:not(html) { display: none !important; }
