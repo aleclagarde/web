@@ -79,6 +79,7 @@ section.bloque { padding: 72px 0; border-top: 1px solid var(--linea); }
 
 /* Apps */
 .app { display: grid; grid-template-columns: 72px 1fr auto; gap: 20px; align-items: center; background: var(--blanco); border: 2px solid var(--tinta); padding: 18px 22px; text-decoration: none; transition: transform .15s, box-shadow .15s; }
+.app + .app { margin-top: 14px; }  /* con más de una app, que no se peguen */
 .app:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--azul); }
 .app img { width: 72px; height: 72px; border-radius: 16px; }
 .app strong { display: block; font-size: 22px; letter-spacing: -0.01em; }

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descargar Ster</title>
+<meta name="description" content="Ster — el cronómetro de estudio para opositores y universitarios.">
+<link rel="canonical" href="https://aleclagarde.com/ster/app/">
+
+<!-- Esto es lo que ve quien recibe una invitación por WhatsApp, así que
+     las etiquetas sociales importan más aquí que en ninguna otra página:
+     sin ellas el enlace sale como una línea de texto pelada. Los
+     rastreadores que pintan la vista previa leen el HTML pero no
+     ejecutan el script de abajo, así que la tarjeta sale aunque a las
+     personas se las mande a su tienda. -->
+<meta property="og:title" content="Ster · Cronómetro de estudio">
+<meta property="og:description" content="Mide lo que estudias, no lo que crees.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aleclagarde.com/ster/app/">
+<meta property="og:image" content="https://aleclagarde.com/ster/icono.png">
+<meta name="twitter:card" content="summary">
+
+<!-- ── a qué tienda manda ───────────────────────────────────────────────
+     Cada móvil a la suya. Las direcciones van SIN código de país y SIN
+     el nombre de la app: el /us/ que da App Store Connect mandaría a un
+     opositor español a la tienda de Estados Unidos, y el nombre en la
+     ruta deja de valer el día que se renombre la app.
+
+     `location.replace` y no `href`: con `href` esta página se queda en
+     el historial, y al volver atrás desde la tienda el navegador la
+     carga otra vez y te vuelve a expulsar.
+
+     ⚠️  GOOGLE PLAY ESTÁ A `null` A PROPÓSITO. Mientras Ster esté solo
+     en prueba cerrada, su ficha de Play no existe para el público y el
+     enlace daría «no encontrado». Hasta entonces, Android va a la
+     portada, que dice que llega pronto. El día que esté publicada, se
+     pone la dirección aquí y todos los enlaces ya compartidos empiezan
+     a funcionar solos. -->
+<script>
+(function () {
+  var APP_STORE = 'https://apps.apple.com/app/id6812349526';
+  var GOOGLE_PLAY = null; // 'https://play.google.com/store/apps/details?id=com.sterstudy.ster'
+  var PORTADA = '../';
+
+  var ua = navigator.userAgent || '';
+  // Los iPad recientes se presentan como un Mac; lo que los delata es
+  // la pantalla táctil.
+  var ios = /iPhone|iPad|iPod/.test(ua) ||
+            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var android = /Android/.test(ua);
+
+  var destino = ios ? APP_STORE : android ? (GOOGLE_PLAY || PORTADA) : PORTADA;
+  location.replace(destino);
+})();
+</script>
+
+<link rel="icon" href="../../favicon.png">
+<link rel="stylesheet" href="../../fuentes/fuentes.css">
+<link rel="stylesheet" href="../../estilos.css">
+</head>
+<body>
+<!-- Lo que se ve sin JavaScript, o el instante antes de la redirección.
+     Se sostiene solo: si algún día se quita el script, esto es una
+     página normal con los dos caminos. -->
+<main>
+<div class="barra">
+  <span class="etiqueta"><a href="../../ster/">ster</a> / descargar</span>
+</div>
+<h1>Ster</h1><hr class="doble">
+<p class="entradilla">Mide lo que estudias, no lo que crees.</p>
+<p><a class="boton" href="https://apps.apple.com/app/id6812349526">Descargar en la App Store</a></p>
+<p class="nota">Para iPhone. La versión de Android llegará pronto.</p>
+<p><a href="../../ster/">Qué es Ster</a></p>
+<footer class="etiqueta"><a href="../../">aleclagarde.com</a> · <a href="../../apps/">Apps</a> · <a href="mailto:ster@aleclagarde.com">ster@aleclagarde.com</a></footer>
+</main>
+</body>
+</html>
