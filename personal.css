@@ -161,26 +161,24 @@ main > section.bloque:nth-of-type(even) .caja { background: var(--lienzo); }
 .habilidades .caja h3 { font-size: 14px; font-weight: 600; color: var(--tinta-48); margin: 0 0 var(--e-sm); letter-spacing: -0.016em; }
 .habilidades .caja p { margin: 0; color: var(--tinta); font-size: 17px; line-height: 1.4; }
 
-/* Apps: losetas de producto, una clara y una oscura */
-.cabeza-bloque > div:has(> .app) { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--e-base); }
+/* Apps: rejilla que crece sola. Con 2 apps ocupan el ancho en dos
+   columnas; con 3 o más, tres por fila. Todas las tarjetas iguales para
+   que la rejilla se lea como un catálogo, tenga las apps que tenga. */
+.apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--e-base); }
 .app {
   display: flex; flex-direction: column; align-items: center; text-align: center;
   background: var(--pergamino); color: var(--tinta);
-  border-radius: var(--r-xxl); padding: var(--e-enorme) var(--e-xxl) var(--e-xxxl);
+  border-radius: var(--r-xxl); padding: var(--e-xxxl) var(--e-xl) var(--e-xxl);
   transition: transform var(--movimiento);
 }
-.app + .app { margin-top: var(--e-base); }
-.cabeza-bloque > div:has(> .app) .app + .app { margin-top: 0; }
-.app:nth-child(even) { background: var(--losa-1); color: var(--sobre-oscuro); }
-main > section.bloque:nth-of-type(even) .app:nth-child(odd) { background: var(--lienzo); }
+main > section.bloque:nth-of-type(even) .app { background: var(--lienzo); }
 .app:hover { text-decoration: none; }
 .app:active { transform: scale(0.98); }
-.app img { width: 112px; height: 112px; border-radius: 25px; box-shadow: var(--sombra-producto); }
-.app strong { display: block; margin-top: var(--e-xxl); font-family: var(--display); font-size: 40px; line-height: 1.1; font-weight: 700; letter-spacing: -0.03em; }
-.app small { display: block; margin: var(--e-sm) auto 0; max-width: 30ch; color: var(--tinta-80); font-size: 19px; line-height: 1.35; }
-.app:nth-child(even) small { color: var(--sobre-oscuro-suave); }
-.app em { margin-top: var(--e-xl); font-size: 14px; font-style: normal; letter-spacing: -0.016em; color: var(--tinta-48); }
-.app:nth-child(even) em { color: var(--sobre-oscuro-suave); }
+.app img { width: 96px; height: 96px; border-radius: 22px; box-shadow: var(--sombra-producto); }
+.app > div { display: flex; flex-direction: column; flex: 1; }
+.app strong { display: block; margin-top: var(--e-xl); font-family: var(--display); font-size: 28px; line-height: 1.14; font-weight: 700; letter-spacing: -0.025em; }
+.app small { display: block; margin: var(--e-sm) auto 0; max-width: 30ch; color: var(--tinta-80); font-size: 17px; line-height: 1.4; }
+.app em { margin-top: auto; padding-top: var(--e-xl); font-size: 14px; font-style: normal; letter-spacing: -0.016em; color: var(--tinta-48); }
 
 /* ── Contacto: losa oscura y centrada ────────────────────────────── */
 .contacto { background: var(--losa-2); color: var(--sobre-oscuro); padding: var(--e-seccion) 0; text-align: center; }
@@ -226,13 +224,19 @@ html[data-idioma="en"] [lang="es"]:not(html) { display: none !important; }
   .trayectoria > li { grid-template-columns: 1fr; padding: var(--e-xl) 0; }
   .trayectoria > li > *, .trayectoria .fecha { grid-column: 1; grid-row: auto; }
   .trayectoria .fecha { padding: 0 0 var(--e-xs); }
-  .rejilla, .habilidades, .cabeza-bloque > div:has(> .app) { grid-template-columns: 1fr; }
+  .rejilla, .habilidades { grid-template-columns: 1fr; }
   .caja { border-radius: var(--r-xl); padding: var(--e-xl); }
   .rejilla .caja { min-height: 0; }
-  .app { border-radius: var(--r-xl); padding: var(--e-xxxl) var(--e-xl) var(--e-xxl); }
-  .app img { width: 88px; height: 88px; border-radius: 20px; }
-  .app strong { font-size: 32px; margin-top: var(--e-xl); }
-  .app small { font-size: 17px; }
+  /* En móvil, lista compacta (icono a la izquierda) para que muchas apps no alarguen la página */
+  .apps { grid-template-columns: 1fr; gap: 0; background: var(--pergamino); border-radius: var(--r-xl); padding: 0 var(--e-base); }
+  main > section.bloque:nth-of-type(even) .apps { background: var(--lienzo); }
+  .app, main > section.bloque:nth-of-type(even) .app { flex-direction: row; align-items: center; gap: var(--e-base); text-align: left; background: transparent; border-radius: 0; padding: var(--e-base) 0; }
+  .app + .app { border-top: 1px solid var(--linea); }
+  .app img { flex: none; width: 64px; height: 64px; border-radius: 15px; box-shadow: none; }
+  .app > div { flex: 1; }
+  .app strong { margin-top: 0; font-size: 19px; line-height: 1.25; letter-spacing: -0.016em; }
+  .app small { margin: var(--e-xxs) 0 0; font-size: 15px; max-width: none; }
+  .app em { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
