@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descargar Pasati</title>
+<meta name="description" content="Pasati: un pasatiempo distinto cada día para jugar con tus amigos.">
+<link rel="icon" href="../../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../estilos.css">
+<script src="../../idioma.js"></script>
+<style>
+  .codigo { font: 700 34px/1 'Libre Franklin', sans-serif; letter-spacing: 6px; background: var(--marcador); color: #151515; display: inline-block; padding: 8px 14px; transform: rotate(-1.5deg); margin: 6px 0 2px; }
+  .botones { display: flex; flex-direction: column; gap: 10px; margin: 18px 0; max-width: 360px; }
+  .botones .boton { text-align: center; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+<div class="barra">
+  <span class="etiqueta"><a href="../../pasati/">pasati</a> / descargar</span>
+  <span class="etiqueta idiomas"><a href="?lang=es" data-lang="es">ES</a><a href="?lang=en" data-lang="en">EN</a></span>
+</div>
+
+<div lang="es">
+<h1>Pasati</h1><hr class="doble">
+<p class="entradilla">Un pasatiempo distinto cada día para jugar con tus amigos.</p>
+<div class="con-codigo" hidden>
+  <p>Te han invitado a un grupo. Este es su código:</p>
+  <p><span class="codigo"></span></p>
+  <p class="nota">Si ya tienes Pasati, ábrela y mételo en <b>Tengo un código</b> (o pulsa «Abrir en Pasati»).</p>
+</div>
+<div class="botones">
+  <a class="boton abrir" href="#" hidden>Abrir en Pasati</a>
+  <a class="boton" href="https://apps.apple.com/app/pasati/id6817790043">Descargar en la App Store (iPhone)</a>
+  <a class="boton hueco" href="mailto:pasati@aleclagarde.com?subject=Quiero%20probar%20Pasati%20en%20Android">Android: pide entrar en la prueba</a>
+</div>
+<p class="nota">En Android, Pasati aún está en pruebas: escribe a <a href="mailto:pasati@aleclagarde.com">pasati@aleclagarde.com</a> con el correo de tu cuenta de Google y te invitamos.</p>
+</div>
+
+<div lang="en">
+<h1>Pasati</h1><hr class="doble">
+<p class="entradilla">A different puzzle every day to play with your friends.</p>
+<div class="con-codigo" hidden>
+  <p>You’ve been invited to a group. Here’s its code:</p>
+  <p><span class="codigo"></span></p>
+  <p class="nota">If you already have Pasati, open it and enter it in <b>I have a code</b> (or tap “Open in Pasati”).</p>
+</div>
+<div class="botones">
+  <a class="boton abrir" href="#" hidden>Open in Pasati</a>
+  <a class="boton" href="https://apps.apple.com/app/pasati/id6817790043">Download on the App Store (iPhone)</a>
+  <a class="boton hueco" href="mailto:pasati@aleclagarde.com?subject=I%20want%20to%20try%20Pasati%20on%20Android">Android: ask to join the test</a>
+</div>
+<p class="nota">On Android, Pasati is still in testing: email <a href="mailto:pasati@aleclagarde.com">pasati@aleclagarde.com</a> with your Google account address and we’ll invite you.</p>
+</div>
+</main>
+<script>
+  // ?codigo=XXXXXX: se enseña el código y el botón para abrirlo en la app.
+  (function () {
+    var c = (new URLSearchParams(location.search).get('codigo') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 8);
+    if (!c) return;
+    document.querySelectorAll('.con-codigo').forEach(function (e) { e.hidden = false; });
+    document.querySelectorAll('.codigo').forEach(function (e) { e.textContent = c; });
+    document.querySelectorAll('.abrir').forEach(function (a) { a.hidden = false; a.href = 'pasati://unirse?codigo=' + c; });
+  })();
+</script>
+</body>
+</html>
