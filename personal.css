@@ -191,6 +191,28 @@ main > section.bloque:nth-of-type(even) .app { background: var(--lienzo); }
 .contacto .boton.lleno { background: var(--primario); border-color: var(--primario); color: var(--sobre-oscuro); }
 .contacto .boton.lleno:hover { background: var(--primario-foco); border-color: var(--primario-foco); }
 
+/* ── Documento: aviso legal. Un panel de lectura sobre el pergamino,
+   como la trayectoria; sin rayas entre apartados, solo aire. ─────── */
+.portada.corta { padding-bottom: var(--e-xxxl); }
+.documento { margin: 0 auto; max-width: var(--lectura); background: var(--lienzo); border-radius: var(--r-xxl); padding: var(--e-xxxl); }
+.documento > .fecha { margin: 0 0 var(--e-xl); }
+.documento h2 { font-family: var(--display); font-size: 28px; line-height: 1.14; font-weight: 700; letter-spacing: -0.025em; margin: var(--e-xxxl) 0 var(--e-base); }
+.documento > .fecha + h2 { margin-top: 0; }
+.documento h3 { font-size: 17px; line-height: 1.35; font-weight: 600; margin: var(--e-xl) 0 var(--e-xs); }
+.documento p { margin: 0 0 var(--e-md); color: var(--tinta-80); }
+.documento .nota { font-size: 14px; line-height: 1.43; color: var(--tinta-48); margin-top: var(--e-base); }
+.datos { margin: 0; background: var(--perla); border-radius: var(--r-lg); padding: 0 var(--e-lg); }
+.datos > div { display: grid; grid-template-columns: 120px 1fr; gap: var(--e-base); padding: var(--e-md) 0; }
+.datos > div + div { border-top: 1px solid var(--linea-suave); }
+.datos dt { font-size: 14px; color: var(--tinta-48); padding-top: 2px; }
+.datos dd { margin: 0; font-weight: 600; }
+.filas { list-style: none; margin: var(--e-base) 0 0; padding: 0 var(--e-lg); background: var(--perla); border-radius: var(--r-lg); }
+.filas li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--e-sm) var(--e-base); padding: var(--e-md) 0; }
+.filas li + li { border-top: 1px solid var(--linea-suave); }
+.filas strong { font-weight: 600; }
+.filas .botones { margin: 0; gap: var(--e-sm); flex-wrap: nowrap; }
+.boton.chica { min-height: 36px; padding: 6px var(--e-base); font-size: 15px; }
+
 /* ── Pie ─────────────────────────────────────────────────────────── */
 footer { background: var(--pergamino); padding: var(--e-xl) 0 var(--e-xxxl); font-size: 12px; line-height: 1.6; letter-spacing: -0.01em; color: var(--tinta-80); }
 footer .envoltura { display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--e-sm); }
@@ -237,6 +259,9 @@ html[data-idioma="en"] [lang="es"]:not(html) { display: none !important; }
   .app strong { margin-top: 0; font-size: 19px; line-height: 1.25; letter-spacing: -0.016em; }
   .app small { margin: var(--e-xxs) 0 0; font-size: 15px; max-width: none; }
   .app em { display: none; }
+  .documento { padding: var(--e-xl); border-radius: var(--r-xl); }
+  .documento h2 { font-size: 24px; margin-top: var(--e-xxl); }
+  .datos > div { grid-template-columns: 1fr; gap: var(--e-xxs); }
 }
 
 @media (prefers-reduced-motion: reduce) {
