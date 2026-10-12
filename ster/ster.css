@@ -137,6 +137,14 @@ b, strong { color: var(--texto); font-weight: 600; }
   padding: 16px 30px; border-radius: 999px;
 }
 .boton:hover { filter: brightness(1.06); }
+/* La segunda opción, debajo de la principal: misma pastilla, sin relleno,
+   para que no compita con «Descargar». */
+.boton-secundario {
+  background: transparent; color: var(--texto);
+  border: 1px solid var(--borde); margin-top: 16px;
+  font-size: 15px; padding: 13px 24px;
+}
+.boton-secundario:hover { filter: none; border-color: var(--acento); color: var(--acento); }
 
 /* ── secciones de la portada ── */
 .seccion { padding: 56px 0; border-bottom: 1px solid var(--borde); }
