@@ -284,3 +284,8 @@ html[data-idioma="en"] [lang="es"]:not(html) { display: none !important; }
   .dialogo { max-width: none; }
   .pie-columnas { grid-template-columns: 1fr 1fr; gap: 24px; }
 }
+
+/* Acceso para Android, junto a la App Store */
+.descarga { display: grid; gap: 14px; justify-items: start; }
+.android { font-size: var(--t-s); line-height: 1.5; max-width: 42ch; }
+.android a { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
