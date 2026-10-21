@@ -1,0 +1,29 @@
+/* Aviso de tienda.js: QR de la App Store para quien entra desde el ordenador. */
+.tienda {
+  width: min(360px, calc(100vw - 32px));
+  border: 0;
+  border-radius: 16px;
+  padding: 28px 24px 24px;
+  background: #fff;
+  color: #151515;
+  text-align: center;
+  font-family: inherit;
+}
+.tienda::backdrop { background: rgba(10, 8, 6, 0.6); }
+.tienda[open] { animation: tienda-entra .22s cubic-bezier(.2, .7, .1, 1); }
+@keyframes tienda-entra { from { opacity: 0; transform: translateY(12px) scale(.98); } }
+.tienda-cerrar {
+  position: absolute; top: 8px; right: 8px; width: 40px; height: 40px;
+  border: 0; border-radius: 50%; background: transparent; color: #151515;
+  font-size: 26px; line-height: 1; cursor: pointer;
+}
+.tienda-cerrar:hover { background: #f0ede8; }
+.tienda-titulo { font-size: 1.25rem; font-weight: 700; margin: 0 0 16px; }
+.tienda-qr { display: block; width: 200px; height: 200px; margin: 0 auto 12px; }
+.tienda-texto { font-size: 0.9375rem; line-height: 1.5; margin: 0 0 14px; color: #4a4540; }
+.tienda-boton {
+  display: block; margin: 4px 0 12px; padding: 12px 16px; border-radius: 999px;
+  background: #151515; color: #fff; text-decoration: none; font-weight: 700;
+}
+.tienda-enlace { font-size: 0.875rem; color: #4a4540; }
+@media (prefers-reduced-motion: reduce) { .tienda[open] { animation: none; } }
