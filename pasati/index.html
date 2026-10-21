@@ -16,71 +16,338 @@
 <meta name="apple-itunes-app" content="app-id=6817790043">
 <link rel="icon" href="../favicon.png">
 <link rel="stylesheet" href="../fuentes/fuentes.css">
-<link rel="stylesheet" href="../estilos.css">
+<link rel="stylesheet" href="pasati.css">
 <script src="../idioma.js"></script>
+<script src="pasati.js" defer></script>
+<script src="pasati.js" defer></script>
+<script src="pasati.js" defer></script>
 </head>
 <body>
-<main>
-<div class="barra">
-  <span class="etiqueta"><a href="../">aleclagarde.com</a> / <a href="../apps/">apps</a> / pasati</span>
-  <span class="etiqueta idiomas"><a href="?lang=es" data-lang="es">ES</a><a href="?lang=en" data-lang="en">EN</a></span>
-</div>
 <div lang="es">
-<h1>Pasati</h1><hr class="doble">
-<p class="entradilla">Un pasatiempo distinto cada día para jugar con tus amigos: crucigramas, damero maldito, batalla naval, mapas, banderas, palabras y más de veinte juegos. A todo el grupo le toca el mismo reto, una partida al día, y cada semana hay clasificación.</p>
-<p><a class="boton" href="https://apps.apple.com/app/pasati/id6817790043">Descargar en la App Store</a></p>
-<h2>Cómo funciona</h2>
-<ul>
-<li>Crea un grupo y pasa el código a tu gente.</li>
-<li>Cada día sale un juego al azar, el mismo para todos. De 0 a 100 puntos; a igualdad, gana quien tarde menos.</li>
-<li>Ves las puntuaciones de los demás en directo, y te avisamos cuando alguien juega o escribe.</li>
-<li>Si te atascas, un anuncio te da un extra (una vez por partida). Con <i>Pasati sin anuncios</i>, pago único, el extra es directo y la práctica va sin anuncios.</li>
-<li><b>Reto diario</b>: además, cada día hay un juego igual para todo el mundo. Tu calendario guarda cada resultado; con medalla más de la mitad de los días del mes, te llevas el trofeo.</li>
-<li><b>Un jugador</b>: 5000 niveles que pasan por todos los juegos, con niveles difíciles cada pocos y <b>tinta roja</b> para sellos en rojo.</li>
-<li>Puedes practicar todos los juegos cuando quieras, sin que cuente.</li>
-</ul>
-<h2>Vida de grupo</h2>
-<ul>
-<li><b>Charla</b> con GIFs, para picaros entre partida y partida.</li>
-<li><b>Sellos</b>: ponle tu sello a la partida de un amigo que te haya gustado.</li>
-<li><b>Medallas</b> por cada 100 y una <b>vitrina</b> con las mejores marcas del grupo.</li>
-<li><b>Rachas</b> de días seguidos jugando, con comodín por si un día se te olvida.</li>
-<li><b>Tinta</b>: cada partida te da gotas para el <b>Quiosco</b>, donde hay sellos, colores para tu nombre, papel para la app, cabeceras para el grupo y marcos para la vitrina. Todo es estética: nada da ventaja.</li>
-</ul>
-<h2>Los juegos</h2>
-<div class="juegos"><div><b>Anagramas</b><br><span class="nota">palabras desordenadas</span></div><div><b>Banderas</b><br><span class="nota">¿de qué país es?</span></div><div><b>Batalla naval</b><br><span class="nota">coloca la flota con las pistas</span></div><div><b>Cálculo mental</b><br><span class="nota">cuentas contra el reloj</span></div><div><b>Capitales</b><br><span class="nota">capitales en el mapa del mundo</span></div><div><b>Conexiones</b><br><span class="nota">cuatro grupos de cuatro</span></div><div><b>Damero maldito</b><br><span class="nota">un refrán escondido en definiciones</span></div><div><b>¿Dónde está?</b><br><span class="nota">municipios en el mapa de España</span></div><div><b>¿En qué año?</b><br><span class="nota">hechos históricos</span></div><div><b>Encuentra el distinto</b><br><span class="nota">el símbolo que no encaja</span></div><div><b>Escalera</b><br><span class="nota">de una palabra a otra, letra a letra</span></div><div><b>Hilo temático</b><br><span class="nota">palabras de un tema enredadas en la rejilla</span></div><div><b>Intrusa</b><br><span class="nota">la palabra que sobra</span></div><div><b>Laberinto</b><br><span class="nota">a oscuras, contra el reloj</span></div><div><b>Luces</b><br><span class="nota">ilumina el tablero sin que se vean</span></div><div><b>Más o menos</b><br><span class="nota">¿más o menos habitantes, altura, superficie?</span></div><div><b>Memoria</b><br><span class="nota">repite la secuencia</span></div><div><b>Minicrucigrama</b><br><span class="nota">un crucigrama de 5×5</span></div><div><b>Ordena</b><br><span class="nota">cinco cosas en orden</span></div><div><b>Ordenado</b><br><span class="nota">la palabra secreta de una lista</span></div><div><b>Palabra oculta</b><br><span class="nota">cinco letras, seis intentos</span></div><div><b>Palabras escondidas</b><br><span class="nota">todas las que salgan con siete letras</span></div><div><b>Puentes</b><br><span class="nota">une las islas</span></div><div><b>Secuencias</b><br><span class="nota">¿qué número sigue?</span></div><div><b>Silueta</b><br><span class="nota">¿qué país tiene esta forma?</span></div><div><b>Sopa de letras</b><br><span class="nota">seis palabras escondidas</span></div><div><b>Tiendas</b><br><span class="nota">una tienda junto a cada árbol</span></div></div>
-<h2>Legal y ayuda</h2>
-<p><a href="../pasati/privacidad/">Política de privacidad</a> · <a href="../pasati/terminos/">Términos de uso</a> · <a href="../pasati/soporte/">Ayuda y contacto</a></p>
+<div class="lienzo">
+<header class="arriba">
+  <a class="volver" href="../">aleclagarde.com</a>
+  <nav class="enlaces"><a href="#como">Cómo funciona</a><a href="#juegos">Los juegos</a><a href="soporte/">Ayuda</a></nav>
+  <span class="derecha"><span class="idiomas"><a href="?lang=es" data-lang="es">ES</a><a href="?lang=en" data-lang="en">EN</a></span><a class="boton" href="https://apps.apple.com/app/pasati/id6817790043">Descargar</a></span>
+</header>
+<main class="hoja">
+<section class="portada">
+  <div class="cabecera">
+    <h1>Pasati</h1>
+    <p class="fecha"><span class="hoy" data-fecha="es"></span><span>Los pasatiempos de hoy</span></p>
+  </div>
+  <div class="raya-doble" aria-hidden="true"></div>
+  <div class="portada-cuerpo">
+    <div class="portada-texto">
+      <p class="entradilla aparece">Un pasatiempo distinto cada día para jugar con tus amigos: crucigramas, damero maldito, batalla naval, mapas, banderas, palabras y más de veinte juegos. A todo el grupo le toca el mismo reto, una partida al día, y cada semana hay clasificación.</p>
+      <p class="aparece"><a class="boton boton-grande" href="https://apps.apple.com/app/pasati/id6817790043">Descargar en la App Store</a></p>
+    </div>
+    <div class="portada-laminas">
+      <figure class="lamina aparece"><img src="img/inicio-es.jpg" width="520" height="1125" alt="La portada de Pasati: racha, reto diario, tus grupos y el modo un jugador"></figure>
+      <figure class="lamina lamina-2 aparece"><img src="img/grupo-es.jpg" width="520" height="1125" alt="Un grupo en Pasati: el juego de hoy, tu resultado y la clasificación del día"></figure>
+    </div>
+  </div>
+</section>
+<section class="como" id="como">
+  <div class="como-texto aparece">
+    <h2>Cómo funciona</h2>
+    <p>Crea un grupo y pasa el código a tu gente. Desde ese día, todos tenéis el mismo pasatiempo.</p>
+  </div>
+  <div class="tique aparece">
+    <h3>Con tu grupo</h3>
+    <ul>
+      <li><span class="que">Cada día sale un juego al azar, el mismo para todos.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">1 al día</span></li>
+      <li><span class="que">De 0 a 100 puntos; a igualdad, gana quien tarde menos.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">0–100</span></li>
+      <li><span class="que">Ves las puntuaciones de los demás en directo, y te avisamos cuando alguien juega o escribe.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">en directo</span></li>
+      <li><span class="que">Si te atascas, un anuncio te da un extra (una vez por partida). Con <i>Pasati sin anuncios</i>, pago único, el extra es directo y la práctica va sin anuncios.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">1 extra</span></li>
+    </ul>
+    <h3>Y además</h3>
+    <ul>
+      <li><span class="que"><b>Reto diario</b>: cada día hay un juego igual para todo el mundo.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">cada día</span></li>
+      <li><span class="que"><b>Un jugador</b>: 5000 niveles que pasan por todos los juegos.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">5000</span></li>
+      <li><span class="que">Puedes practicar todos los juegos cuando quieras, sin que cuente.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">libre</span></li>
+    </ul>
+    <p class="tique-fin"><span>Cada semana hay clasificación</span><span>lunes</span></p>
+  </div>
+</section>
+<section class="modos">
+  <h2 class="aparece">Tres formas de jugar</h2>
+  <div class="modos-cuerpo" data-modos>
+    <div class="modos-lamina aparece">
+      <img src="img/grupo-es.jpg" width="520" height="1125" alt="Un grupo con el juego de hoy y la clasificación del día" data-modo="0" loading="lazy">
+      <img src="img/diario-es.jpg" width="520" height="1125" alt="El calendario del reto diario con las medallas del mes y el trofeo" data-modo="1" hidden loading="lazy">
+      <img src="img/niveles-es.jpg" width="520" height="1125" alt="El mapa de niveles del modo un jugador" data-modo="2" hidden loading="lazy">
+    </div>
+    <div class="modos-texto">
+      <div class="pestanas" role="tablist"><button type="button" role="tab" aria-selected="true" data-modo="0">Tu grupo</button><button type="button" role="tab" aria-selected="false" data-modo="1">Reto diario</button><button type="button" role="tab" aria-selected="false" data-modo="2">Un jugador</button></div>
+      <div class="modo" data-modo="0"><h3>Un juego al día</h3><p>Cada día sale un juego al azar, el mismo para todos. Ves las puntuaciones de los demás en directo, y te avisamos cuando alguien juega o escribe.</p></div>
+      <div class="modo" data-modo="1" hidden><h3>El mismo para todo el mundo</h3><p>Además, cada día hay un juego igual para todo el mundo. Tu calendario guarda cada resultado; con medalla más de la mitad de los días del mes, te llevas el trofeo.</p></div>
+      <div class="modo" data-modo="2" hidden><h3>5000 niveles</h3><p>5000 niveles que pasan por todos los juegos, con niveles difíciles cada pocos y tinta roja para sellos en rojo.</p></div>
+      <div class="acciones"><a class="celda celda-tinta" href="https://apps.apple.com/app/pasati/id6817790043">Descargar en la App Store</a><a class="celda" href="#juegos">Ver los 27 juegos</a></div>
+    </div>
+  </div>
+</section>
+<section class="vida">
+  <h2 class="aparece">Vida de grupo</h2>
+  <div class="pila">
+    <article class="hojita hojita-0">
+      <h3>Charla</h3>
+      <p>Charla con GIFs, para picaros entre partida y partida.</p>
+      <img src="img/charla-es.jpg" width="520" height="1125" alt="La charla de un grupo con mensajes y un GIF" loading="lazy">
+    </article>
+    <article class="hojita hojita-1">
+      <h3>Sellos</h3>
+      <p>Ponle tu sello a la partida de un amigo que te haya gustado.</p>
+      <img src="img/grupo-es.jpg" width="520" height="1125" alt="Partidas del día con los sellos que les han puesto los amigos" loading="lazy">
+    </article>
+    <article class="hojita hojita-2">
+      <h3>Medallas y vitrina</h3>
+      <p>Medallas por cada 100 y una vitrina con las mejores marcas del grupo.</p>
+      <img src="img/vitrina-es.jpg" width="520" height="1125" alt="La vitrina con las mejores marcas en cada juego" loading="lazy">
+    </article>
+    <article class="hojita hojita-3">
+      <h3>Rachas</h3>
+      <p>Rachas de días seguidos jugando, con comodín por si un día se te olvida.</p>
+      <img src="img/inicio-es.jpg" width="520" height="1125" alt="La racha y los comodines en la portada de la app" loading="lazy">
+    </article>
+    <article class="hojita hojita-4">
+      <h3>Tinta y Quiosco</h3>
+      <p>Cada partida te da gotas para el Quiosco, donde hay sellos, colores para tu nombre, papel para la app, cabeceras para el grupo y marcos para la vitrina. Todo es estética: nada da ventaja.</p>
+      <img src="img/quiosco-es.jpg" width="520" height="1125" alt="El Quiosco con sellos y marcos que se compran con tinta" loading="lazy">
+    </article>
+  </div>
+</section>
+<section class="juegos" id="juegos">
+  <div class="juegos-cabeza aparece">
+    <h2>Los juegos</h2>
+    <p>Toca uno para ver cómo se juega.</p>
+  </div>
+  <div class="juegos-cuerpo" data-juegos>
+    <ul class="juegos-lista">
+      <li><button type="button" data-k="anagrama" data-r="Palabras desordenadas, de más cortas a más largas. Resuelve todas las que puedas en 90 segundos. 100 puntos a las 12." data-n="Anagramas" aria-pressed="false"><b>Anagramas</b><span>palabras desordenadas</span></button></li>
+      <li><button type="button" data-k="banderas" data-r="¿De qué país es la bandera? Cuatro opciones. Un fallo y se acaba; 100 puntos a los 20 aciertos." data-n="Banderas" aria-pressed="false"><b>Banderas</b><span>¿de qué país es?</span></button></li>
+      <li><button type="button" data-k="naval" data-r="Coloca la flota: un barco de 4, dos de 3, dos de 2 y tres de 1. Los números dicen cuántas casillas de barco hay en cada fila y columna, y los barcos no se tocan ni en diagonal. 100 puntos en 2 minutos y medio o menos." data-n="Batalla naval" aria-pressed="false"><b>Batalla naval</b><span>coloca la flota con las pistas</span></button></li>
+      <li><button type="button" data-k="calculo" data-r="Sumas, restas, multiplicaciones y divisiones sencillas. Todas las que puedas en 60 segundos. 100 puntos a las 30." data-n="Cálculo mental" aria-pressed="false"><b>Cálculo mental</b><span>cuentas contra el reloj</span></button></li>
+      <li><button type="button" data-k="mundo" data-r="Cinco capitales del mundo: toca en el mapa dónde crees que está cada una. Cuanto más cerca, más puntos." data-n="Capitales" aria-pressed="false"><b>Capitales</b><span>capitales en el mapa del mundo</span></button></li>
+      <li><button type="button" data-k="conexiones" data-r="Separa las 16 palabras en 4 grupos de 4 que tengan algo en común. Ojo, hay trampas. Tres fallos y se acaba; 100 puntos sin fallos." data-n="Conexiones" aria-pressed="false"><b>Conexiones</b><span>cuatro grupos de cuatro</span></button></li>
+      <li><button type="button" data-k="damero" data-r="Hay un refrán escondido. Cada letra pertenece a una palabra definida (A, B, C…): lo que escribes en las palabras aparece en el refrán y al revés. 100 puntos si lo sacas en 4 minutos o menos." data-n="Damero maldito" aria-pressed="false"><b>Damero maldito</b><span>un refrán escondido en definiciones</span></button></li>
+      <li><button type="button" data-k="donde" data-r="Cinco municipios de España: toca en el mapa dónde crees que está cada uno. Cuanto más cerca, más puntos." data-n="¿Dónde está?" aria-pressed="false"><b>¿Dónde está?</b><span>municipios en el mapa de España</span></button></li>
+      <li><button type="button" data-k="anio" data-r="Tres hechos históricos. Di el año de cada uno (vale a 2 años o menos): te decimos si fue antes o después. Cinco intentos por hecho; acertar en tres o menos da todos los puntos." data-n="¿En qué año?" aria-pressed="false"><b>¿En qué año?</b><span>hechos históricos</span></button></li>
+      <li><button type="button" data-k="distinto" data-r="En cada rejilla hay un símbolo que no es como los demás: tócalo. Cada vez son más y se parecen más. Un fallo resta 5 segundos. 60 segundos; 100 puntos a los 30." data-n="Encuentra el distinto" aria-pressed="false"><b>Encuentra el distinto</b><span>el símbolo que no encaja</span></button></li>
+      <li><button type="button" data-k="escalera" data-r="Tres escaleras: ve de una palabra a otra cambiando una sola letra cada vez (toca la letra y elige la nueva); cada paso tiene que ser una palabra. En verde, las letras que ya coinciden con la meta. Con el mínimo de pasos o uno más, la escalera vale entera." data-n="Escalera" aria-pressed="false"><b>Escalera</b><span>de una palabra a otra, letra a letra</span></button></li>
+      <li><button type="button" data-k="hilo" data-r="La rejilla entera está hecha con palabras del tema que ves arriba. Cada palabra es un hilo de letras vecinas (también en diagonal): tócalas en orden y pulsa Enviar. 100 puntos si las encuentras todas en minuto y medio o menos." data-n="Hilo temático" aria-pressed="false"><b>Hilo temático</b><span>palabras de un tema enredadas en la rejilla</span></button></li>
+      <li><button type="button" data-k="intrusa" data-r="Cinco palabras: cuatro tienen algo en común y una no. Encuentra la intrusa. Se va complicando. Un fallo y se acaba; 100 puntos a los 20 aciertos. A igual puntuación, gana quien lleve más aciertos." data-n="Intrusa" aria-pressed="false"><b>Intrusa</b><span>la palabra que sobra</span></button></li>
+      <li><button type="button" data-k="laberinto" data-r="Lleva la ficha de la esquina de arriba a la de abajo. Está a oscuras: solo ves lo que tienes cerca. Desliza el dedo o usa las flechas: la ficha avanza en línea recta hasta una pared o un cruce. 100 puntos si sales en 12 segundos o menos." data-n="Laberinto" aria-pressed="false"><b>Laberinto</b><span>a oscuras, contra el reloj</span></button></li>
+      <li><button type="button" data-k="luces" data-r="Ilumina todas las casillas blancas. Cada bombilla alumbra su fila y su columna hasta una casilla negra, y dos bombillas no pueden verse. El número de una negra dice cuántas bombillas tiene pegadas. 100 puntos en 1 minuto o menos." data-n="Luces" aria-pressed="false"><b>Luces</b><span>ilumina el tablero sin que se vean</span></button></li>
+      <li><button type="button" data-k="mas_menos" data-r="Una cadena sin fin de parejas. Ves el dato de una y dices si la siguiente tiene más o menos. Un fallo y se acaba; 100 puntos a los 20 aciertos. A igual puntuación, gana quien lleve más aciertos." data-n="Más o menos" aria-pressed="false"><b>Más o menos</b><span>¿más o menos habitantes, altura, superficie?</span></button></li>
+      <li><button type="button" data-k="memoria" data-r="Se enciende una secuencia de casillas; repítela. Cada ronda, un paso más. Un fallo y se acaba; 100 puntos a las 14 rondas." data-n="Memoria" aria-pressed="false"><b>Memoria</b><span>repite la secuencia</span></button></li>
+      <li><button type="button" data-k="crucigrama" data-r="Un crucigrama de 5×5. Toca una casilla para escribir; tócala otra vez para cambiar entre horizontal y vertical. 100 puntos si lo acabas en 1 minuto o menos." data-n="Minicrucigrama" aria-pressed="true"><b>Minicrucigrama</b><span>un crucigrama de 5×5</span></button></li>
+      <li><button type="button" data-k="ordena" data-r="Pon cinco cosas en orden. Tienes tres intentos y tras cada uno ves cuáles están en su sitio. A la primera o a la segunda, 100 puntos." data-n="Ordena" aria-pressed="false"><b>Ordena</b><span>cinco cosas en orden</span></button></li>
+      <li><button type="button" data-k="ordenado" data-r="Hay una palabra secreta en una lista ordenada alfabéticamente (oficios, animales, deportes…). Escribe una palabra de esa lista y te diremos cuántos puestos más arriba o más abajo está la secreta. 10 intentos; 100 puntos si la aciertas en 6 o menos." data-n="Ordenado" aria-pressed="false"><b>Ordenado</b><span>la palabra secreta de una lista</span></button></li>
+      <li><button type="button" data-k="palabra" data-r="Adivina la palabra de cinco letras en seis intentos (en tres o menos, 100 puntos). Negro: letra en su sitio. Subrayada en amarillo: está, pero en otro sitio." data-n="Palabra oculta" aria-pressed="false"><b>Palabra oculta</b><span>cinco letras, seis intentos</span></button></li>
+      <li><button type="button" data-k="escondidas" data-r="Forma todas las palabras que puedas con siete letras (de 3 letras o más, cada letra una vez). Las largas valen más; la de siete, 10 puntos. Dos minutos." data-n="Palabras escondidas" aria-pressed="false"><b>Palabras escondidas</b><span>todas las que salgan con siete letras</span></button></li>
+      <li><button type="button" data-k="puentes" data-r="Une todas las islas con puentes rectos. Cada isla dice cuántos le llegan; entre dos islas caben uno o dos; no se pueden cruzar y todo tiene que quedar unido. 100 puntos en 1 minuto o menos." data-n="Puentes" aria-pressed="false"><b>Puentes</b><span>une las islas</span></button></li>
+      <li><button type="button" data-k="secuencia" data-r="¿Qué número sigue? Empiezan muy fáciles y se van complicando. Un fallo y se acaba; 100 puntos a las 12." data-n="Secuencias" aria-pressed="false"><b>Secuencias</b><span>¿qué número sigue?</span></button></li>
+      <li><button type="button" data-k="silueta" data-r="¿De qué país es esta forma? Cuatro opciones. Un fallo y se acaba; 100 puntos a los 20 aciertos. A igual puntuación, gana quien lleve más aciertos." data-n="Silueta" aria-pressed="false"><b>Silueta</b><span>¿qué país tiene esta forma?</span></button></li>
+      <li><button type="button" data-k="sopa" data-r="Encuentra las seis palabras: en horizontal, vertical o diagonal, y también del revés. Toca la primera letra y luego la última. Todas en 90 segundos o menos, 100 puntos." data-n="Sopa de letras" aria-pressed="false"><b>Sopa de letras</b><span>seis palabras escondidas</span></button></li>
+      <li><button type="button" data-k="tiendas" data-r="Cada árbol tiene su tienda pegada, arriba, abajo o a un lado. Las tiendas no se tocan ni en diagonal y los números dicen cuántas hay en cada fila y columna. 100 puntos en 45 segundos o menos." data-n="Tiendas" aria-pressed="false"><b>Tiendas</b><span>una tienda junto a cada árbol</span></button></li>
+    </ul>
+    <div class="juegos-panel">
+      <figure><img src="img/crucigrama-es.jpg" width="520" height="1125" alt="Minicrucigrama" data-img data-lang-img="es"></figure>
+      <div class="juego-info"><h3 data-nombre>Minicrucigrama</h3><p data-regla>Un crucigrama de 5×5. Toca una casilla para escribir; tócala otra vez para cambiar entre horizontal y vertical. 100 puntos si lo acabas en 1 minuto o menos.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+<section class="cierre">
+  <div class="cierre-texto">
+    <h2>Crea tu grupo</h2>
+    <p>Al crearlo te damos un código de seis letras para pasárselo a tu gente.</p>
+  </div>
+  <form class="dialogo" data-ui action="https://apps.apple.com/app/pasati/id6817790043" method="get" onsubmit="return false">
+    <p class="dialogo-titulo">Grupo nuevo</p>
+    <label class="dialogo-etiqueta" for="nombre-es">Nombre del grupo</label>
+    <input id="nombre-es" class="dialogo-campo" value="Los del pueblo" maxlength="40" autocomplete="off">
+    <p class="dialogo-etiqueta">Idioma de los juegos</p>
+    <div class="segmentos" role="radiogroup"><button type="button" role="radio" aria-checked="true">En español</button><button type="button" role="radio" aria-checked="false">In English</button></div>
+    <p class="dialogo-nota">Todo el grupo juega con las mismas palabras y preguntas, en este idioma.</p>
+    <a class="dialogo-boton" href="https://apps.apple.com/app/pasati/id6817790043">Crear grupo en la app</a>
+  </form>
+</section>
+</div>
+<footer class="pie">
+  <div class="pie-columnas">
+    <div><p class="pie-titulo">Legal y ayuda</p><ul><li><a href="privacidad/">Política de privacidad</a></li><li><a href="terminos/">Términos de uso</a></li><li><a href="soporte/">Ayuda y contacto</a></li></ul></div>
+    <div><p class="pie-titulo">Descargar</p><ul><li><a href="https://apps.apple.com/app/pasati/id6817790043">App Store</a></li></ul></div>
+    <div><p class="pie-titulo">Más</p><ul><li><a href="../">aleclagarde.com</a></li><li><a href="../apps/">Apps</a></li><li><a href="../legal/">Aviso legal</a></li></ul></div>
+    <div><p class="pie-titulo">Contacto</p><ul><li><a href="mailto:pasati@aleclagarde.com">pasati@aleclagarde.com</a></li></ul></div>
+  </div>
+  <svg class="pie-marca" viewBox="0 0 1000 300" role="img" aria-label="Pasati"><text x="500" y="250" text-anchor="middle" textLength="980" lengthAdjust="spacingAndGlyphs">Pasati</text></svg>
+  <p class="pie-legal">© 2026 Alec Lagarde</p>
+</footer>
 </div>
 <div lang="en">
-<h1>Pasati</h1><hr class="doble">
-<p class="entradilla">A different puzzle every day to play with your friends: mini crosswords, acrostics, battleships, maps, flags, word games and more than twenty others. Everyone in the group gets the same challenge, one game a day, and there’s a weekly leaderboard.</p>
-<p><a class="boton" href="https://apps.apple.com/app/pasati/id6817790043">Download on the App Store</a></p>
-<h2>How it works</h2>
-<ul>
-<li>Create a group and share the code with your people.</li>
-<li>Every day a random game comes up, the same for everyone. 0 to 100 points; on a tie, the fastest wins.</li>
-<li>See everyone’s scores live, and get notified when someone plays or writes.</li>
-<li>If you get stuck, an ad gives you an extra (once per game). With <i>Pasati Ad-Free</i>, a one-time purchase, the extra is instant and practice has no ads.</li>
-<li><b>Daily challenge</b>: on top of that, every day there’s one game that’s the same for everyone. Your calendar keeps every result; get a medal on more than half the days of a month and you win its trophy.</li>
-<li><b>Single player</b>: 5000 levels that run through every game, with hard ones every few levels and <b>red ink</b> for red stamps.</li>
-<li>Practise every game whenever you like, without it counting.</li>
-</ul>
-<h2>Group life</h2>
-<ul>
-<li><b>Chat</b> with GIFs, for some banter between games.</li>
-<li><b>Stamps</b>: put your stamp on a friend’s game you liked.</li>
-<li><b>Medals</b> for every 100 and a <b>trophy case</b> with the group’s best scores.</li>
-<li><b>Streaks</b> of days in a row, with a saver in case you forget one day.</li>
-<li><b>Ink</b>: every game gives you drops for the <b>Kiosk</b>, with stamps, name colours, app paper, group mastheads and trophy-case frames. It’s all looks: nothing gives an edge.</li>
-</ul>
-<h2>The games</h2>
-<div class="juegos"><div><b>Acrostic</b><br><span class="nota">a proverb hidden in clues</span></div><div><b>Anagrams</b><br><span class="nota">jumbled words</span></div><div><b>Battleships</b><br><span class="nota">place the fleet from the clues</span></div><div><b>Bridges</b><br><span class="nota">connect the islands</span></div><div><b>Capitals</b><br><span class="nota">capitals on the world map</span></div><div><b>Connections</b><br><span class="nota">four groups of four</span></div><div><b>Flags</b><br><span class="nota">which country is it?</span></div><div><b>Hidden Word</b><br><span class="nota">five letters, six tries</span></div><div><b>Hidden Words</b><br><span class="nota">every word from seven letters</span></div><div><b>Higher or Lower</b><br><span class="nota">more or fewer people, higher or lower?</span></div><div><b>In Order</b><br><span class="nota">the secret word in a list</span></div><div><b>Light Up</b><br><span class="nota">light the grid, bulbs can’t see each other</span></div><div><b>Maze</b><br><span class="nota">in the dark, against the clock</span></div><div><b>Memory</b><br><span class="nota">repeat the sequence</span></div><div><b>Mental Maths</b><br><span class="nota">sums against the clock</span></div><div><b>Mini Crossword</b><br><span class="nota">a 5×5 crossword</span></div><div><b>Odd One Out</b><br><span class="nota">spot the different symbol</span></div><div><b>Odd Word Out</b><br><span class="nota">the word that doesn’t belong</span></div><div><b>Sequences</b><br><span class="nota">what comes next?</span></div><div><b>Silhouette</b><br><span class="nota">which country has this shape?</span></div><div><b>Sort It</b><br><span class="nota">five things in order</span></div><div><b>Tents</b><br><span class="nota">a tent next to every tree</span></div><div><b>Theme Threads</b><br><span class="nota">theme words woven through the grid</span></div><div><b>What Year?</b><br><span class="nota">historical events</span></div><div><b>Word Ladder</b><br><span class="nota">word to word, one letter at a time</span></div><div><b>Word Search</b><br><span class="nota">six hidden words</span></div></div>
-<p class="nota">Groups in Spanish also get a Spain-specific game (towns on the map).</p>
-<h2>Legal and help</h2>
-<p><a href="../pasati/privacidad/">Privacy policy</a> · <a href="../pasati/terminos/">Terms of use</a> · <a href="../pasati/soporte/">Help and contact</a></p>
-</div>
-<footer class="etiqueta"><a href="../">aleclagarde.com</a> · <a href="../apps/"><span lang="es">Apps</span><span lang="en">Apps</span></a> · <a href="mailto:pasati@aleclagarde.com">pasati@aleclagarde.com</a> · <a href="../legal/"><span lang="es">Aviso legal</span><span lang="en">Legal</span></a></footer>
+<div class="lienzo">
+<header class="arriba">
+  <a class="volver" href="../">aleclagarde.com</a>
+  <nav class="enlaces"><a href="#como">How it works</a><a href="#juegos">The games</a><a href="soporte/">Help</a></nav>
+  <span class="derecha"><span class="idiomas"><a href="?lang=es" data-lang="es">ES</a><a href="?lang=en" data-lang="en">EN</a></span><a class="boton" href="https://apps.apple.com/app/pasati/id6817790043">Download</a></span>
+</header>
+<main class="hoja">
+<section class="portada">
+  <div class="cabecera">
+    <h1>Pasati</h1>
+    <p class="fecha"><span class="hoy" data-fecha="en"></span><span>Today’s puzzles</span></p>
+  </div>
+  <div class="raya-doble" aria-hidden="true"></div>
+  <div class="portada-cuerpo">
+    <div class="portada-texto">
+      <p class="entradilla aparece">A different puzzle every day to play with your friends: mini crosswords, acrostics, battleships, maps, flags, word games and more than twenty others. Everyone in the group gets the same challenge, one game a day, and there’s a weekly leaderboard.</p>
+      <p class="aparece"><a class="boton boton-grande" href="https://apps.apple.com/app/pasati/id6817790043">Download on the App Store</a></p>
+    </div>
+    <div class="portada-laminas">
+      <figure class="lamina aparece"><img src="img/inicio-en.jpg" width="520" height="1125" alt="Pasati’s front page: streak, daily challenge, your groups and single player"></figure>
+      <figure class="lamina lamina-2 aparece"><img src="img/grupo-en.jpg" width="520" height="1125" alt="A group in Pasati: today’s game, your score and the day’s leaderboard"></figure>
+    </div>
+  </div>
+</section>
+<section class="como" id="como">
+  <div class="como-texto aparece">
+    <h2>How it works</h2>
+    <p>Create a group and share the code with your people. From that day on, you all get the same puzzle.</p>
+  </div>
+  <div class="tique aparece">
+    <h3>With your group</h3>
+    <ul>
+      <li><span class="que">Every day a random game comes up, the same for everyone.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">1 a day</span></li>
+      <li><span class="que">0 to 100 points; on a tie, the fastest wins.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">0–100</span></li>
+      <li><span class="que">See everyone’s scores live, and get notified when someone plays or writes.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">live</span></li>
+      <li><span class="que">If you get stuck, an ad gives you an extra (once per game). With <i>Pasati Ad-Free</i>, a one-time purchase, the extra is instant and practice has no ads.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">1 extra</span></li>
+    </ul>
+    <h3>And also</h3>
+    <ul>
+      <li><span class="que"><b>Daily challenge</b>: every day there’s one game that’s the same for everyone.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">daily</span></li>
+      <li><span class="que"><b>Single player</b>: 5000 levels that run through every game.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">5000</span></li>
+      <li><span class="que">Practise every game whenever you like, without it counting.</span><span class="puntos" aria-hidden="true"></span><span class="cuanto">free</span></li>
+    </ul>
+    <p class="tique-fin"><span>A new leaderboard every week</span><span>Monday</span></p>
+  </div>
+</section>
+<section class="modos">
+  <h2 class="aparece">Three ways to play</h2>
+  <div class="modos-cuerpo" data-modos>
+    <div class="modos-lamina aparece">
+      <img src="img/grupo-en.jpg" width="520" height="1125" alt="A group with today’s game and the day’s leaderboard" data-modo="0" loading="lazy">
+      <img src="img/diario-en.jpg" width="520" height="1125" alt="The daily challenge calendar with the month’s medals and trophy" data-modo="1" hidden loading="lazy">
+      <img src="img/niveles-en.jpg" width="520" height="1125" alt="The single-player level map" data-modo="2" hidden loading="lazy">
+    </div>
+    <div class="modos-texto">
+      <div class="pestanas" role="tablist"><button type="button" role="tab" aria-selected="true" data-modo="0">Your group</button><button type="button" role="tab" aria-selected="false" data-modo="1">Daily challenge</button><button type="button" role="tab" aria-selected="false" data-modo="2">Single player</button></div>
+      <div class="modo" data-modo="0"><h3>One game a day</h3><p>Every day a random game comes up, the same for everyone. See everyone’s scores live, and get notified when someone plays or writes.</p></div>
+      <div class="modo" data-modo="1" hidden><h3>The same for everyone</h3><p>On top of that, every day there’s one game that’s the same for everyone. Your calendar keeps every result; get a medal on more than half the days of a month and you win its trophy.</p></div>
+      <div class="modo" data-modo="2" hidden><h3>5000 levels</h3><p>5000 levels that run through every game, with hard ones every few levels and red ink for red stamps.</p></div>
+      <div class="acciones"><a class="celda celda-tinta" href="https://apps.apple.com/app/pasati/id6817790043">Download on the App Store</a><a class="celda" href="#juegos">See all the games</a></div>
+    </div>
+  </div>
+</section>
+<section class="vida">
+  <h2 class="aparece">Group life</h2>
+  <div class="pila">
+    <article class="hojita hojita-0">
+      <h3>Chat</h3>
+      <p>Chat with GIFs, for some banter between games.</p>
+      <img src="img/charla-en.jpg" width="520" height="1125" alt="A group chat with messages and a GIF" loading="lazy">
+    </article>
+    <article class="hojita hojita-1">
+      <h3>Stamps</h3>
+      <p>Put your stamp on a friend’s game you liked.</p>
+      <img src="img/grupo-en.jpg" width="520" height="1125" alt="Today’s games with the stamps friends gave them" loading="lazy">
+    </article>
+    <article class="hojita hojita-2">
+      <h3>Medals and trophy case</h3>
+      <p>Medals for every 100 and a trophy case with the group’s best scores.</p>
+      <img src="img/vitrina-en.jpg" width="520" height="1125" alt="The trophy case with the best score in each game" loading="lazy">
+    </article>
+    <article class="hojita hojita-3">
+      <h3>Streaks</h3>
+      <p>Streaks of days in a row, with a saver in case you forget one day.</p>
+      <img src="img/inicio-en.jpg" width="520" height="1125" alt="The streak and streak savers on the app’s front page" loading="lazy">
+    </article>
+    <article class="hojita hojita-4">
+      <h3>Ink and the Kiosk</h3>
+      <p>Every game gives you drops for the Kiosk, with stamps, name colours, app paper, group mastheads and trophy-case frames. It’s all looks: nothing gives an edge.</p>
+      <img src="img/quiosco-en.jpg" width="520" height="1125" alt="The Kiosk with stamps and frames bought with ink" loading="lazy">
+    </article>
+  </div>
+</section>
+<section class="juegos" id="juegos">
+  <div class="juegos-cabeza aparece">
+    <h2>The games</h2>
+    <p>Tap one to see how it’s played.</p>
+  </div>
+  <div class="juegos-cuerpo" data-juegos>
+    <ul class="juegos-lista">
+      <li><button type="button" data-k="damero" data-r="A proverb is hidden. Each letter belongs to a clued word (A, B, C…): what you type in the words appears in the proverb, and the other way round. 100 points if you crack it in 4 minutes or less." data-n="Acrostic" aria-pressed="false"><b>Acrostic</b><span>a proverb hidden in clues</span></button></li>
+      <li><button type="button" data-k="anagrama" data-r="Scrambled words, from shorter to longer. Solve as many as you can in 90 seconds. 100 points at 12." data-n="Anagrams" aria-pressed="false"><b>Anagrams</b><span>jumbled words</span></button></li>
+      <li><button type="button" data-k="naval" data-r="Place the fleet: one ship of 4, two of 3, two of 2 and three of 1. The numbers show how many ship squares are in each row and column, and ships never touch, not even diagonally. 100 points in two and a half minutes or less." data-n="Battleships" aria-pressed="false"><b>Battleships</b><span>place the fleet from the clues</span></button></li>
+      <li><button type="button" data-k="puentes" data-r="Connect all the islands with straight bridges. Each island shows how many bridges reach it; two islands can share one or two; bridges can’t cross and everything must end up connected. 100 points in 1 minute or less." data-n="Bridges" aria-pressed="false"><b>Bridges</b><span>connect the islands</span></button></li>
+      <li><button type="button" data-k="mundo" data-r="Five world capitals: tap where you think each one is on the map. The closer, the more points." data-n="Capitals" aria-pressed="false"><b>Capitals</b><span>capitals on the world map</span></button></li>
+      <li><button type="button" data-k="conexiones" data-r="Sort the 16 words into 4 groups of 4 that share something. Watch out for traps. Three mistakes and it’s over; 100 points with no mistakes." data-n="Connections" aria-pressed="false"><b>Connections</b><span>four groups of four</span></button></li>
+      <li><button type="button" data-k="banderas" data-r="Which country does the flag belong to? Four options. One mistake and it’s over; 100 points at 20 correct." data-n="Flags" aria-pressed="false"><b>Flags</b><span>which country is it?</span></button></li>
+      <li><button type="button" data-k="palabra" data-r="Guess the five-letter word in six tries (three or fewer, 100 points). Black: right letter, right place. Yellow underline: in the word, wrong place." data-n="Hidden Word" aria-pressed="false"><b>Hidden Word</b><span>five letters, six tries</span></button></li>
+      <li><button type="button" data-k="escondidas" data-r="Make as many words as you can from seven letters (3 letters or more, each letter once). Longer words score more; the seven-letter one is worth 10. Two minutes." data-n="Hidden Words" aria-pressed="false"><b>Hidden Words</b><span>every word from seven letters</span></button></li>
+      <li><button type="button" data-k="mas_menos" data-r="An endless chain of pairs. You see one figure and say whether the next is higher or lower. One mistake and it’s over; 100 points at 20 correct. On equal points, more correct answers wins." data-n="Higher or Lower" aria-pressed="false"><b>Higher or Lower</b><span>more or fewer people, higher or lower?</span></button></li>
+      <li><button type="button" data-k="ordenado" data-r="There’s a secret word in an alphabetical list (jobs, animals, sports…). Type a word from that list and we’ll tell you how many places above or below the secret one is. 10 tries; 100 points if you get it in 6 or fewer." data-n="In Order" aria-pressed="false"><b>In Order</b><span>the secret word in a list</span></button></li>
+      <li><button type="button" data-k="luces" data-r="Light up every white square. Each bulb lights its row and column up to a black square, and no two bulbs may see each other. A number on a black square says how many bulbs touch it. 100 points in 1 minute or less." data-n="Light Up" aria-pressed="false"><b>Light Up</b><span>light the grid, bulbs can’t see each other</span></button></li>
+      <li><button type="button" data-k="laberinto" data-r="Take the counter from the top corner to the bottom one. It’s dark: you only see what’s near you. Swipe or use the arrows: it keeps going straight until a wall or a junction. 100 points if you get out in 12 seconds or less." data-n="Maze" aria-pressed="false"><b>Maze</b><span>in the dark, against the clock</span></button></li>
+      <li><button type="button" data-k="memoria" data-r="A sequence of squares lights up; repeat it. Each round adds a step. One mistake and it’s over; 100 points at 14 rounds." data-n="Memory" aria-pressed="false"><b>Memory</b><span>repeat the sequence</span></button></li>
+      <li><button type="button" data-k="calculo" data-r="Simple additions, subtractions, multiplications and divisions. As many as you can in 60 seconds. 100 points at 30." data-n="Mental Maths" aria-pressed="false"><b>Mental Maths</b><span>sums against the clock</span></button></li>
+      <li><button type="button" data-k="crucigrama" data-r="A 5×5 crossword. Tap a square to type; tap it again to switch between across and down. 100 points if you finish in 1 minute or less." data-n="Mini Crossword" aria-pressed="true"><b>Mini Crossword</b><span>a 5×5 crossword</span></button></li>
+      <li><button type="button" data-k="distinto" data-r="Each grid has one symbol that isn’t like the rest: tap it. They get bigger and more alike. A wrong tap costs 5 seconds. 60 seconds; 100 points at 30." data-n="Odd One Out" aria-pressed="false"><b>Odd One Out</b><span>spot the different symbol</span></button></li>
+      <li><button type="button" data-k="intrusa" data-r="Five words: four have something in common and one doesn’t. Find the odd one out. It gets harder. One mistake and it’s over; 100 points at 20 correct. On equal points, more correct answers wins." data-n="Odd Word Out" aria-pressed="false"><b>Odd Word Out</b><span>the word that doesn’t belong</span></button></li>
+      <li><button type="button" data-k="secuencia" data-r="What number comes next? They start very easy and get harder. One mistake and it’s over; 100 points at 12." data-n="Sequences" aria-pressed="false"><b>Sequences</b><span>what comes next?</span></button></li>
+      <li><button type="button" data-k="silueta" data-r="Which country has this shape? Four options. One mistake and it’s over; 100 points at 20 correct. On equal points, more correct answers wins." data-n="Silhouette" aria-pressed="false"><b>Silhouette</b><span>which country has this shape?</span></button></li>
+      <li><button type="button" data-k="ordena" data-r="Put five things in order. Three tries; after each one you see which are in the right place. First or second try, 100 points." data-n="Sort It" aria-pressed="false"><b>Sort It</b><span>five things in order</span></button></li>
+      <li><button type="button" data-k="tiendas" data-r="Every tree has its own tent right next to it, above, below or beside. Tents never touch, not even diagonally, and the numbers show how many are in each row and column. 100 points in 45 seconds or less." data-n="Tents" aria-pressed="false"><b>Tents</b><span>a tent next to every tree</span></button></li>
+      <li><button type="button" data-k="hilo" data-r="The whole grid is made of words from the theme shown above. Each word is a thread of neighbouring letters (diagonals too): tap them in order and press Send. 100 points if you find them all in a minute and a half or less." data-n="Theme Threads" aria-pressed="false"><b>Theme Threads</b><span>theme words woven through the grid</span></button></li>
+      <li><button type="button" data-k="anio" data-r="Three historical events. Guess the year of each (within 2 years counts): we tell you if it was earlier or later. Five tries per event; getting it in three or fewer gives full points." data-n="What Year?" aria-pressed="false"><b>What Year?</b><span>historical events</span></button></li>
+      <li><button type="button" data-k="escalera" data-r="Three ladders: get from one word to another changing one letter at a time (tap the letter, then pick the new one); every step must be a real word. Letters already matching the goal turn green. Minimum steps or one more and the ladder counts in full." data-n="Word Ladder" aria-pressed="false"><b>Word Ladder</b><span>word to word, one letter at a time</span></button></li>
+      <li><button type="button" data-k="sopa" data-r="Find the six words: across, down or diagonal, and backwards too. Tap the first letter and then the last. All of them in 90 seconds or less, 100 points." data-n="Word Search" aria-pressed="false"><b>Word Search</b><span>six hidden words</span></button></li>
+    </ul>
+    <div class="juegos-panel">
+      <figure><img src="img/crucigrama-en.jpg" width="520" height="1125" alt="Mini Crossword" data-img data-lang-img="en"></figure>
+      <div class="juego-info"><h3 data-nombre>Mini Crossword</h3><p data-regla>A 5×5 crossword. Tap a square to type; tap it again to switch between across and down. 100 points if you finish in 1 minute or less.</p></div>
+    </div>
+  </div>
+  <p class="nota">Groups in Spanish also get a Spain-specific game (towns on the map).</p>
+</section>
 </main>
+<section class="cierre">
+  <div class="cierre-texto">
+    <h2>Start your group</h2>
+    <p>You’ll get a six-letter code to send to your friends.</p>
+  </div>
+  <form class="dialogo" data-ui action="https://apps.apple.com/app/pasati/id6817790043" method="get" onsubmit="return false">
+    <p class="dialogo-titulo">New group</p>
+    <label class="dialogo-etiqueta" for="nombre-en">Group name</label>
+    <input id="nombre-en" class="dialogo-campo" value="The usual suspects" maxlength="40" autocomplete="off">
+    <p class="dialogo-etiqueta">Puzzle language</p>
+    <div class="segmentos" role="radiogroup"><button type="button" role="radio" aria-checked="false">En español</button><button type="button" role="radio" aria-checked="true">In English</button></div>
+    <p class="dialogo-nota">Everyone in the group plays the same words and questions, in this language.</p>
+    <a class="dialogo-boton" href="https://apps.apple.com/app/pasati/id6817790043">Create the group in the app</a>
+  </form>
+</section>
+</div>
+<footer class="pie">
+  <div class="pie-columnas">
+    <div><p class="pie-titulo">Legal and help</p><ul><li><a href="privacidad/">Privacy policy</a></li><li><a href="terminos/">Terms of use</a></li><li><a href="soporte/">Help and contact</a></li></ul></div>
+    <div><p class="pie-titulo">Download</p><ul><li><a href="https://apps.apple.com/app/pasati/id6817790043">App Store</a></li></ul></div>
+    <div><p class="pie-titulo">More</p><ul><li><a href="../">aleclagarde.com</a></li><li><a href="../apps/">Apps</a></li><li><a href="../legal/">Legal</a></li></ul></div>
+    <div><p class="pie-titulo">Contact</p><ul><li><a href="mailto:pasati@aleclagarde.com">pasati@aleclagarde.com</a></li></ul></div>
+  </div>
+  <svg class="pie-marca" viewBox="0 0 1000 300" role="img" aria-label="Pasati"><text x="500" y="250" text-anchor="middle" textLength="980" lengthAdjust="spacingAndGlyphs">Pasati</text></svg>
+  <p class="pie-legal">© 2026 Alec Lagarde</p>
+</footer>
+</div>
 </body>
 </html>
