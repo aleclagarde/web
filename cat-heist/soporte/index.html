@@ -4,60 +4,94 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171230">
 <title>Ayuda · Cat Heist</title>
 <meta name="description" content="Ayuda y contacto de Cat Heist">
-<link rel="icon" href="../../favicon.png">
-<link rel="stylesheet" href="../../fuentes/fuentes.css">
-<link rel="stylesheet" href="../../estilos.css">
+<link rel="icon" href="../icono.png">
+<link rel="preload" href="../fuentes/lilita-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../cat-heist.css">
 <script src="../../idioma.js"></script>
+<script src="../cat-heist.js" defer></script>
 </head>
 <body>
+<header class="marco barra">
+  <a class="marca" href="../soporte/"><img src="../icono.png" width="44" height="44" alt="">Cat Heist</a>
+  <nav class="nav">
+    <a href="../soporte/" aria-current="page"><span lang="es">Ayuda</span><span lang="en">Help</span></a>
+    <a href="../privacidad/"><span lang="es">Privacidad</span><span lang="en">Privacy</span></a>
+    <a class="idioma" href="?lang=es" data-lang="es" lang="en">ES</a><a class="idioma" href="?lang=en" data-lang="en" lang="es">EN</a>
+  </nav>
+</header>
 <main>
-<div class="barra">
-  <span class="etiqueta"><a href="../../apps/">cat heist</a> / ayuda</span>
-  <span class="etiqueta idiomas"><a href="?lang=es" data-lang="es">ES</a><a href="?lang=en" data-lang="en">EN</a></span>
+<section class="marco cabecera">
+  <div>
+    <h1><span lang="es">Ayuda</span><span lang="en">Help</span></h1>
+    <p class="lema" lang="es">Cat Heist es un puzle de gatos ladrones. ¿Algo no va o tienes una idea? Escríbeme y te respondo yo.</p>
+    <p class="lema" lang="en">Cat Heist is a puzzle about thief cats. Something not working, or have an idea? Write to me and I’ll answer myself.</p>
+    <a class="boton" href="mailto:catheist@aleclagarde.com?subject=Cat%20Heist"><span lang="es">Escribir a soporte</span><span lang="en">Email support</span></a>
+    <p class="fecha correo">catheist@aleclagarde.com</p>
+  </div>
+  <div class="pantalla"><img lang="es" src="../img/mapa-es.jpg" width="780" height="1688" alt="El mapa de niveles de Cat Heist" loading="lazy"><img lang="en" src="../img/mapa-en.jpg" width="780" height="1688" alt="The Cat Heist level map" loading="lazy"></div>
+</section>
+<div class="hoja">
+  <section class="marco tema">
+    <div lang="es">
+      <h2>Cómo se juega</h2>
+      <p>Toca un gato para subirlo a la cinta. Al dar la vuelta al tablero, roba las gemas de su color que tenga a la vista, una por fila.</p>
+      <p>Si termina la vuelta con gemas pendientes, espera en un hueco. Si se llenan todos los huecos, el dragón se despierta y pierdes.</p>
+      <h3>Un nivel es muy difícil</h3>
+      <p>Los niveles difíciles y muy difíciles están pensados para necesitar varios intentos, pero todos se pueden superar. Mira qué color está a la vista antes de lanzar y no llenes la cinta de golpe. Los potenciadores y la racha de victorias ayudan.</p>
+    </div>
+    <div lang="en">
+      <h2>How to play</h2>
+      <p>Tap a cat to put it on the belt. As it goes round the board, it steals the gems of its colour that it can see, one per row.</p>
+      <p>If it finishes the lap with gems left to steal, it waits in a slot. If every slot fills up, the dragon wakes up and you lose.</p>
+      <h3>A level is really hard</h3>
+      <p>Hard and very hard levels are meant to take a few tries, but every one can be beaten. Check which colour is in view before launching, and don’t fill the belt all at once. Boosters and your win streak help.</p>
+    </div>
+    <div class="pantalla video"><video lang="es" src="../img/partida-es.mp4" poster="../img/partida-es.jpg" width="640" height="1240" autoplay muted loop playsinline preload="metadata" aria-label="Una partida de Cat Heist: los gatos dan la vuelta al tablero robando gemas"></video><video lang="en" src="../img/partida-en.mp4" poster="../img/partida-en.jpg" width="640" height="1240" autoplay muted loop playsinline preload="metadata" aria-label="A game of Cat Heist: the cats go round the board stealing gems"></video></div>
+  </section>
+  <section class="marco tema al-reves">
+    <div lang="es">
+      <h2>Vidas</h2>
+      <p>Tienes 5. Se gasta una al empezar un nivel y la recuperas si ganas. Se recarga una cada 30 minutos.</p>
+      <p>Si te quedas sin vidas, puedes ver un anuncio para conseguir una más (hasta 3 veces al día), recargarlas todas con monedas o comprar una hora de vidas infinitas.</p>
+      <h3>No me llegan los avisos</h3>
+      <p>Revisa que estén activados en <b>Ajustes</b> de Cat Heist y en los ajustes del móvil (Notificaciones → Cat Heist).</p>
+    </div>
+    <div lang="en">
+      <h2>Lives</h2>
+      <p>You have 5. One is used when you start a level and you get it back if you win. One refills every 30 minutes.</p>
+      <p>If you run out, you can watch an ad for an extra one (up to 3 times a day), refill them all with coins or buy an hour of unlimited lives.</p>
+      <h3>I’m not getting notifications</h3>
+      <p>Check they’re on in Cat Heist’s <b>Settings</b> and in your phone settings (Notifications → Cat Heist).</p>
+    </div>
+    <div class="pantalla"><img lang="es" src="../img/vidas-es.jpg" width="780" height="1688" alt="La ventana de vidas de Cat Heist" loading="lazy"><img lang="en" src="../img/vidas-en.jpg" width="780" height="1688" alt="The Cat Heist lives window" loading="lazy"></div>
+  </section>
 </div>
-<div lang="es">
-<h1>Ayuda</h1><hr class="doble">
-<p class="entradilla">¿Algo no va o tienes una idea? Escribe a <a href="mailto:catheist@aleclagarde.com">catheist@aleclagarde.com</a> y te respondo yo.</p>
-<h2>Preguntas frecuentes</h2>
-<h3>¿Cómo se juega?</h3>
-<p>Toca un gato para subirlo a la cinta. Al dar la vuelta, roba las gemas de su color que tenga a la vista. Si acaba con gemas pendientes, espera en un hueco; si se llenan todos los huecos, el dragón se despierta.</p>
-<h3>Un nivel es muy difícil</h3>
-<p>Los niveles difíciles y muy difíciles están hechos para necesitar varios intentos, pero todos se pueden superar. Piensa qué color está a la vista antes de lanzar y no llenes la cinta de golpe. Los potenciadores y la racha de victorias ayudan.</p>
-<h3>¿Cómo funcionan las vidas?</h3>
-<p>Tienes 5. Se gasta una al empezar un nivel y la recuperas si ganas. Se recarga una cada 30 minutos, y puedes ver un anuncio para conseguir una más hasta 3 veces al día.</p>
-<h3>He cambiado de móvil o he borrado la app</h3>
-<p>La partida se guarda solo en el móvil, así que el progreso no se puede recuperar. <i>Sin anuncios</i> sí se recupera con <b>Ajustes → Restaurar compras</b>.</p>
-<h3>He comprado algo y no me ha llegado</h3>
-<p>Cierra y vuelve a abrir la app. Si sigue sin aparecer, escríbenos con el número de pedido que te envió Apple o Google.</p>
-<h3>¿Cómo pido un reembolso?</h3>
-<p>Los reembolsos los gestiona la tienda: en iPhone, desde <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>; en Android, desde tu historial de pedidos de Google Play.</p>
-<h3>No me llegan los avisos</h3>
-<p>Revisa que estén activados en <b>Ajustes</b> de Cat Heist y en los ajustes del móvil (Notificaciones → Cat Heist).</p>
-<p class="nota">Más detalles en la <a href="../../cat-heist/privacidad/">política de privacidad</a>.</p>
+<div class="campo">
+  <section class="marco tema">
+    <div lang="es">
+      <h2>Compras y progreso</h2>
+      <h3>He cambiado de móvil o he borrado la app</h3><p>La partida se guarda solo en el móvil, así que el progreso no se puede recuperar. <i>Sin anuncios</i> sí se recupera con <b>Ajustes → Restaurar compras</b>.</p>
+      <h3>He comprado algo y no me ha llegado</h3><p>Cierra y vuelve a abrir la app. Si sigue sin aparecer, escríbeme con el número de pedido que te envió Apple o Google.</p>
+      <h3>¿Cómo pido un reembolso?</h3><p>Los gestiona la tienda: en iPhone, desde <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>; en Android, desde tu historial de pedidos de Google Play.</p>
+      <h3>¿Qué datos se guardan?</h3><p>Tu partida no sale del móvil. Todo lo demás está en la <a href="../privacidad/">política de privacidad</a>, con el detalle de cada proveedor.</p>
+    </div>
+    <div lang="en">
+      <h2>Purchases and progress</h2>
+      <h3>I changed phones or deleted the app</h3><p>Your game is saved only on the phone, so progress can’t be recovered. <i>No Ads</i> can be recovered with <b>Settings → Restore purchases</b>.</p>
+      <h3>I bought something and didn’t get it</h3><p>Close and reopen the app. If it still doesn’t show up, email me with the order number Apple or Google sent you.</p>
+      <h3>How do I get a refund?</h3><p>The store handles refunds: on iPhone at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>; on Android from your Google Play order history.</p>
+      <h3>What data is stored?</h3><p>Your game never leaves the phone. Everything else is in the <a href="../privacidad/">privacy policy</a>, with the details for each provider.</p>
+    </div>
+    <div class="pantalla"><img lang="es" src="../img/tienda-es.jpg" width="780" height="1688" alt="La tienda de Cat Heist" loading="lazy"><img lang="en" src="../img/tienda-en.jpg" width="780" height="1688" alt="The Cat Heist shop" loading="lazy"></div>
+  </section>
 </div>
-<div lang="en">
-<h1>Help</h1><hr class="doble">
-<p class="entradilla">Something not working, or have an idea? Email <a href="mailto:catheist@aleclagarde.com">catheist@aleclagarde.com</a> and I’ll get back to you myself.</p>
-<h2>FAQ</h2>
-<h3>How do I play?</h3>
-<p>Tap a cat to put it on the belt. As it goes round, it steals the gems of its colour that it can see. If it still has gems to steal, it waits in a slot; if every slot fills up, the dragon wakes up.</p>
-<h3>A level is really hard</h3>
-<p>Hard and very hard levels are meant to take a few tries, but every one can be beaten. Check which colour is in view before launching, and don’t fill the belt all at once. Boosters and your win streak help.</p>
-<h3>How do lives work?</h3>
-<p>You have 5. One is used when you start a level and you get it back if you win. One refills every 30 minutes, and you can watch an ad for an extra one up to 3 times a day.</p>
-<h3>I changed phones or deleted the app</h3>
-<p>Your game is saved only on the phone, so progress can’t be recovered. <i>No Ads</i> can be recovered with <b>Settings → Restore purchases</b>.</p>
-<h3>I bought something and didn’t get it</h3>
-<p>Close and reopen the app. If it still doesn’t show up, email us with the order number Apple or Google sent you.</p>
-<h3>How do I get a refund?</h3>
-<p>Refunds are handled by the store: on iPhone at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>; on Android from your Google Play order history.</p>
-<h3>I’m not getting notifications</h3>
-<p>Check they’re on in Cat Heist’s <b>Settings</b> and in your phone settings (Notifications → Cat Heist).</p>
-<p class="nota">More in the <a href="../../cat-heist/privacidad/">privacy policy</a>.</p>
-</div>
-<footer class="etiqueta"><a href="../../">aleclagarde.com</a> · <a href="../../apps/"><span lang="es">Apps</span><span lang="en">Apps</span></a> · <a href="mailto:alec@aleclagarde.com">alec@aleclagarde.com</a> · <a href="../../legal/"><span lang="es">Aviso legal</span><span lang="en">Legal</span></a></footer>
 </main>
+<footer class="marco pie">
+  <p class="nombre">Cat Heist</p>
+  <p class="enlaces"><a href="../soporte/"><span lang="es">Ayuda</span><span lang="en">Help</span></a><a href="../privacidad/"><span lang="es">Privacidad</span><span lang="en">Privacy</span></a><a href="mailto:catheist@aleclagarde.com">catheist@aleclagarde.com</a><a href="../../apps/"><span lang="es">Más apps</span><span lang="en">More apps</span></a><a href="../../legal/"><span lang="es">Aviso legal</span><span lang="en">Legal</span></a><span>© <span data-anio>2026</span> Alec Lagarde</span></p>
+</footer>
 </body>
 </html>
