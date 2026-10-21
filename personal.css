@@ -1,31 +1,32 @@
-/* aleclagarde.com — web personal (las apps llevan su propio estilo).
+/* aleclagarde.com — aviso legal y 404, con la paleta del inicio (casa.css).
+   Antes:
    Lenguaje de diseño Apple: un solo acento (azul de acción) y solo para lo
    que se pulsa; botones en píldora; ninguna sombra salvo la de los iconos
    de las apps (el «producto»); pesos 400/600/700; secciones que se separan
    alternando el fondo, no con rayas. */
 :root {
   /* Acento */
-  --primario: #0066cc;
-  --primario-foco: #0071e3;
-  --primario-oscuro: #2997ff;   /* enlaces sobre fondo oscuro */
+  --primario: #38450f;
+  --primario-foco: #38450f;
+  --primario-oscuro: #c9d18f;   /* enlaces sobre fondo oscuro */
 
   /* Texto */
-  --tinta: #1d1d1f;
-  --tinta-80: #333333;
-  --tinta-48: #7a7a7a;
+  --tinta: #38450f;
+  --tinta-80: #38450f;
+  --tinta-48: #5d683a;
   --sobre-oscuro: #ffffff;
   --sobre-oscuro-suave: #cccccc;
 
   /* Superficies */
-  --lienzo: #ffffff;
-  --pergamino: #f5f5f7;
-  --perla: #fafafc;
-  --losa-1: #272729;
-  --losa-2: #2a2a2c;
+  --lienzo: #ecebe7;
+  --pergamino: #e1dfd9;
+  --perla: #e6e4df;
+  --losa-1: #38450f;
+  --losa-2: #38450f;
 
   /* Líneas */
-  --linea: #e0e0e0;
-  --linea-suave: #f0f0f0;
+  --linea: #d4d1c9;
+  --linea-suave: #dedbd4;
 
   /* Estado (solo para estados) */
   --exito: #34c759;
@@ -38,8 +39,8 @@
   --r-sm: 6px; --r-md: 10px; --r-lg: 14px; --r-xl: 20px; --r-xxl: 28px; --r-pildora: 999px;
 
   /* Tipo: SF Pro en Apple; Hanken Grotesk (incluida) en el resto */
-  --sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
-  --display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --sans: 'Zilla Slab', Georgia, serif;
+  --display: 'Zilla Slab', Georgia, serif;
 
   --ancho: 1024px;
   --lectura: 820px;
@@ -53,8 +54,8 @@ body {
   margin: 0;
   background: var(--lienzo);
   color: var(--tinta);
-  font: 400 17px/1.47 var(--sans);
-  letter-spacing: -0.022em;
+  font: 400 18px/1.5 var(--sans);
+  letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -66,7 +67,7 @@ a:hover { text-decoration: underline; }
 /* ── Barra ───────────────────────────────────────────────────────── */
 .barra {
   position: sticky; top: 0; z-index: 5;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(236, 235, 231, 0.9);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid var(--linea);

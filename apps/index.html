@@ -15,23 +15,116 @@
 <link rel="canonical" href="https://aleclagarde.com/apps/">
 <link rel="icon" href="../favicon.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="stylesheet" href="../fuentes/fuentes.css">
-<link rel="stylesheet" href="../personal.css">
+<link rel="stylesheet" href="../casa.css">
 <script src="../idioma.js"></script>
+<script src="../casa.js" defer></script>
 </head>
 <body>
-<header class="barra"><div class="envoltura">
-  <a class="marca" href="../"><span class="monograma">AL</span>Alec Lagarde</a>
-  <nav><a href="../apps/">Apps</a><span class="idiomas"><a href="?lang=es" data-lang="es">ES</a><a href="?lang=en" data-lang="en">EN</a></span></nav>
-</div></header>
-<div lang="es"><main>
-<section class="portada sola"><div class="envoltura"><div><p class="antetitulo">Proyectos</p><h1>Apps<span>.</span></h1><p class="lema">Aplicaciones que he diseñado y desarrollado de principio a fin.</p></div></div></section>
-<section class="bloque"><div class="envoltura"><div class="cabeza-bloque"><h2><small>iPhone</small>Publicadas</h2><div class="apps"><a class="app" href="../pasati/"><img src="../pasati/icono.png" alt=""><div><strong>Pasati</strong><small>Un pasatiempo distinto cada día para jugar con tus amigos.</small></div><em>iPhone · 2026</em></a><a class="app" href="../ster/"><img src="../ster/icono.png" alt=""><div><strong>Ster</strong><small>Un cronómetro de estudio que mide lo que estudias de verdad, no lo que crees.</small></div><em>iPhone · 2026</em></a></div></div></div></section>
-</main></div>
-<div lang="en"><main>
-<section class="portada sola"><div class="envoltura"><div><p class="antetitulo">Projects</p><h1>Apps<span>.</span></h1><p class="lema">Apps I have designed and built end to end.</p></div></div></section>
-<section class="bloque"><div class="envoltura"><div class="cabeza-bloque"><h2><small>iPhone</small>Released</h2><div class="apps"><a class="app" href="../pasati/"><img src="../pasati/icono.png" alt=""><div><strong>Pasati</strong><small>A different puzzle every day to play with your friends.</small></div><em>iPhone · 2026</em></a><a class="app" href="../ster/"><img src="../ster/icono.png" alt=""><div><strong>Ster</strong><small>A study timer that measures what you actually study, not what you think you did.</small></div><em>iPhone · 2026</em></a></div></div></div></section>
-</main></div>
-<footer><div class="envoltura"><span>© <span data-anio>2026</span> Alec Lagarde · Barcelona</span><span><a href="mailto:alec@aleclagarde.com">alec@aleclagarde.com</a> · <a href="https://www.linkedin.com/in/alec-lagarde-teixido">LinkedIn</a> · <a href="../legal/"><span lang="es">Aviso legal</span><span lang="en">Legal</span></a></span></div></footer>
+<div lang="es" class="casa">
+<div class="partido">
+  <aside class="escenario" aria-hidden="true">
+    <div class="escena activa" data-escena="inicio">
+      <div class="telefonos"><figure class="telefono"><img src="../pasati/img/inicio-es.jpg" width="520" height="1125" alt="La portada de Pasati"></figure><figure class="telefono"><img src="../ster/img/pausar.jpg" width="600" height="1321" alt="Una sesión de estudio en Ster"></figure></div>
+      <p class="escena-pie">Pasati y Ster</p>
+    </div>
+    <div class="escena" data-escena="pasati">
+      <div class="telefonos"><figure class="telefono"><img src="../pasati/img/grupo-es.jpg" width="520" height="1125" alt="Un grupo de Pasati"></figure><figure class="telefono"><img src="../pasati/img/crucigrama-es.jpg" width="520" height="1125" alt="El minicrucigrama"></figure></div>
+      <p class="escena-pie">Pasati · un grupo y el minicrucigrama</p>
+    </div>
+    <div class="escena" data-escena="ster">
+      <div class="telefonos"><figure class="telefono"><img src="../ster/img/cielo-todo.jpg" width="600" height="1321" alt="El cielo de Ster"></figure><figure class="telefono"><img src="../ster/img/estudiar.jpg" width="600" height="1321" alt="El cronómetro de Ster"></figure></div>
+      <p class="escena-pie">Ster · el cielo y el cronómetro</p>
+    </div>
+  </aside>
+  <main class="columna">
+    <header class="barra"><a class="marca" href="../">Alec Lagarde</a><nav><a href="../">Inicio</a><a href="../pasati/">Pasati</a><a href="../ster/">Ster</a><span class="idiomas"><a href="?lang=es" data-lang="es">ES</a><a href="?lang=en" data-lang="en">EN</a></span></nav></header>
+    <section class="presenta" data-escena="inicio">
+      <h1>Apps</h1>
+      <p class="lema">Aplicaciones que he diseñado y desarrollado de principio a fin, para iPhone. En Android están en pruebas: se puede pedir acceso.</p>
+    </section>
+    <section class="app" data-escena="pasati">
+      <img class="app-icono" src="../pasati/icono.png" width="512" height="512" alt="">
+      <h2>Pasati</h2>
+      <p class="lema">Un pasatiempo distinto cada día para jugar con tus amigos.</p>
+      <p>Cada día sale un juego al azar, el mismo para todo el grupo: crucigramas, damero maldito, batalla naval, mapas, banderas y más de veinte juegos, con clasificación semanal.</p>
+      <p class="pequeno">iPhone · 2026</p>
+      <div class="indice-fotos"><figure class="telefono"><img src="../pasati/img/grupo-es.jpg" width="520" height="1125" alt="Un grupo de Pasati"></figure><figure class="telefono"><img src="../pasati/img/crucigrama-es.jpg" width="520" height="1125" alt="El minicrucigrama"></figure></div>
+      <div class="botones"><a class="boton" href="../pasati/">Ver la web</a><a class="boton boton-suave" href="https://apps.apple.com/app/pasati/id6817790043">App Store</a></div>
+      <p><a class="enlace" href="mailto:pasati@aleclagarde.com?subject=Quiero%20probar%20Pasati%20en%20Android">Pedir acceso para Android</a></p>
+    </section>
+    <section class="app" data-escena="ster">
+      <img class="app-icono" src="../ster/icono.png" width="512" height="512" alt="">
+      <h2>Ster</h2>
+      <p class="lema">Un cronómetro de estudio que mide lo que estudias de verdad, no lo que crees.</p>
+      <p>Cuenta el tiempo efectivo y guarda las pausas aparte, reparte las horas por el temario y va construyendo un cielo con lo que estudias.</p>
+      <p class="pequeno">iPhone · 2026</p>
+      <div class="indice-fotos"><figure class="telefono"><img src="../ster/img/cielo-todo.jpg" width="600" height="1321" alt="El cielo de Ster"></figure><figure class="telefono"><img src="../ster/img/estudiar.jpg" width="600" height="1321" alt="El cronómetro de Ster"></figure></div>
+      <div class="botones"><a class="boton" href="../ster/">Ver la web</a><a class="boton boton-suave" href="https://apps.apple.com/app/id6812349526">App Store</a></div>
+      <p><a class="enlace" href="mailto:ster@aleclagarde.com?subject=Acceso%20a%20Ster%20en%20Android">Pedir acceso para Android</a></p>
+    </section>
+  </main>
+</div>
+<footer class="pie">
+  <div class="tesela tesela-frase"><p>Datos, ciberseguridad y apps propias, desde Barcelona.</p><p class="pequeno">© <span data-anio>2026</span> Alec Lagarde</p></div>
+  <ul class="tesela tesela-nav"><li><a href="../">Inicio</a></li><li><a href="../apps/">Apps</a></li><li><a href="../pasati/">Pasati</a></li><li><a href="../ster/">Ster</a></li><li><a href="../legal/">Aviso legal</a></li></ul>
+  <div class="tesela tesela-hora"><p class="pequeno">Hora en Barcelona</p><p class="reloj" data-reloj>--:--</p></div>
+  <div class="tesela tesela-correo"><a href="mailto:alec@aleclagarde.com">alec@aleclagarde.com</a><a class="pequeno" href="https://www.linkedin.com/in/alec-lagarde-teixido">LinkedIn</a></div>
+  <p class="tesela tesela-marca" aria-hidden="true">Alec Lagarde</p>
+  <a class="tesela tesela-invita" href="mailto:alec@aleclagarde.com"><span>Escríbeme</span><svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path d="M8 40 40 8M16 8h24v24" fill="none" stroke="currentColor" stroke-width="4"/></svg></a>
+</footer>
+</div>
+<div lang="en" class="casa">
+<div class="partido">
+  <aside class="escenario" aria-hidden="true">
+    <div class="escena activa" data-escena="inicio">
+      <div class="telefonos"><figure class="telefono"><img src="../pasati/img/inicio-en.jpg" width="520" height="1125" alt="Pasati’s front page"></figure><figure class="telefono"><img src="../ster/img/pausar.jpg" width="600" height="1321" alt="A study session in Ster"></figure></div>
+      <p class="escena-pie">Pasati and Ster</p>
+    </div>
+    <div class="escena" data-escena="pasati">
+      <div class="telefonos"><figure class="telefono"><img src="../pasati/img/grupo-en.jpg" width="520" height="1125" alt="A Pasati group"></figure><figure class="telefono"><img src="../pasati/img/crucigrama-en.jpg" width="520" height="1125" alt="The mini crossword"></figure></div>
+      <p class="escena-pie">Pasati · a group and the mini crossword</p>
+    </div>
+    <div class="escena" data-escena="ster">
+      <div class="telefonos"><figure class="telefono"><img src="../ster/img/cielo-todo.jpg" width="600" height="1321" alt="Ster’s sky"></figure><figure class="telefono"><img src="../ster/img/estudiar.jpg" width="600" height="1321" alt="Ster’s timer"></figure></div>
+      <p class="escena-pie">Ster · the sky and the timer</p>
+    </div>
+  </aside>
+  <main class="columna">
+    <header class="barra"><a class="marca" href="../">Alec Lagarde</a><nav><a href="../">Home</a><a href="../pasati/">Pasati</a><a href="../ster/">Ster</a><span class="idiomas"><a href="?lang=es" data-lang="es">ES</a><a href="?lang=en" data-lang="en">EN</a></span></nav></header>
+    <section class="presenta" data-escena="inicio">
+      <h1>Apps</h1>
+      <p class="lema">Apps I have designed and built end to end, for iPhone. On Android they are in testing: you can ask for access.</p>
+    </section>
+    <section class="app" data-escena="pasati">
+      <img class="app-icono" src="../pasati/icono.png" width="512" height="512" alt="">
+      <h2>Pasati</h2>
+      <p class="lema">A different puzzle every day to play with your friends.</p>
+      <p>Every day a random game comes up, the same for the whole group: crosswords, acrostics, battleships, maps, flags and more than twenty games, with a weekly leaderboard.</p>
+      <p class="pequeno">iPhone · 2026</p>
+      <div class="indice-fotos"><figure class="telefono"><img src="../pasati/img/grupo-en.jpg" width="520" height="1125" alt="A Pasati group"></figure><figure class="telefono"><img src="../pasati/img/crucigrama-en.jpg" width="520" height="1125" alt="The mini crossword"></figure></div>
+      <div class="botones"><a class="boton" href="../pasati/">See the website</a><a class="boton boton-suave" href="https://apps.apple.com/app/pasati/id6817790043">App Store</a></div>
+      <p><a class="enlace" href="mailto:pasati@aleclagarde.com?subject=I%20want%20to%20try%20Pasati%20on%20Android">Request Android access</a></p>
+    </section>
+    <section class="app" data-escena="ster">
+      <img class="app-icono" src="../ster/icono.png" width="512" height="512" alt="">
+      <h2>Ster</h2>
+      <p class="lema">A study timer that measures what you actually study, not what you think you did.</p>
+      <p>It counts your focused time and keeps your breaks apart, spreads your hours across the syllabus and builds a sky out of what you study.</p>
+      <p class="pequeno">iPhone · 2026</p>
+      <div class="indice-fotos"><figure class="telefono"><img src="../ster/img/cielo-todo.jpg" width="600" height="1321" alt="Ster’s sky"></figure><figure class="telefono"><img src="../ster/img/estudiar.jpg" width="600" height="1321" alt="Ster’s timer"></figure></div>
+      <div class="botones"><a class="boton" href="../ster/">See the website</a><a class="boton boton-suave" href="https://apps.apple.com/app/id6812349526">App Store</a></div>
+      <p><a class="enlace" href="mailto:ster@aleclagarde.com?subject=Ster%20on%20Android">Request Android access</a></p>
+    </section>
+  </main>
+</div>
+<footer class="pie">
+  <div class="tesela tesela-frase"><p>Data, cybersecurity and my own apps, from Barcelona.</p><p class="pequeno">© <span data-anio>2026</span> Alec Lagarde</p></div>
+  <ul class="tesela tesela-nav"><li><a href="../">Home</a></li><li><a href="../apps/">Apps</a></li><li><a href="../pasati/">Pasati</a></li><li><a href="../ster/">Ster</a></li><li><a href="../legal/">Legal</a></li></ul>
+  <div class="tesela tesela-hora"><p class="pequeno">Time in Barcelona</p><p class="reloj" data-reloj>--:--</p></div>
+  <div class="tesela tesela-correo"><a href="mailto:alec@aleclagarde.com">alec@aleclagarde.com</a><a class="pequeno" href="https://www.linkedin.com/in/alec-lagarde-teixido">LinkedIn</a></div>
+  <p class="tesela tesela-marca" aria-hidden="true">Alec Lagarde</p>
+  <a class="tesela tesela-invita" href="mailto:alec@aleclagarde.com"><span>Get in touch</span><svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path d="M8 40 40 8M16 8h24v24" fill="none" stroke="currentColor" stroke-width="4"/></svg></a>
+</footer>
+</div>
 </body>
 </html>
