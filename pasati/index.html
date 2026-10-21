@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pasati - un pasatiempo al día con tus amigos</title>
 <meta name="description" content="Pasati: un pasatiempo distinto cada día para jugar con tus amigos.">
@@ -18,8 +19,6 @@
 <link rel="stylesheet" href="../fuentes/fuentes.css">
 <link rel="stylesheet" href="pasati.css">
 <script src="../idioma.js"></script>
-<script src="pasati.js" defer></script>
-<script src="pasati.js" defer></script>
 <script src="pasati.js" defer></script>
 </head>
 <body>
@@ -98,7 +97,7 @@
     <article class="hojita hojita-1">
       <h3>Sellos</h3>
       <p>Ponle tu sello a la partida de un amigo que te haya gustado.</p>
-      <img src="img/grupo-es.jpg" width="520" height="1125" alt="Partidas del día con los sellos que les han puesto los amigos" loading="lazy">
+      <img src="img/sellos-es.jpg" width="520" height="1125" alt="Partidas del día con los sellos que les han puesto los amigos" loading="lazy">
     </article>
     <article class="hojita hojita-2">
       <h3>Medallas y vitrina</h3>
@@ -164,7 +163,7 @@
     <h2>Crea tu grupo</h2>
     <p>Al crearlo te damos un código de seis letras para pasárselo a tu gente.</p>
   </div>
-  <form class="dialogo" data-ui action="https://apps.apple.com/app/pasati/id6817790043" method="get" onsubmit="return false">
+  <div class="dialogo" data-ui>
     <p class="dialogo-titulo">Grupo nuevo</p>
     <label class="dialogo-etiqueta" for="nombre-es">Nombre del grupo</label>
     <input id="nombre-es" class="dialogo-campo" value="Los del pueblo" maxlength="40" autocomplete="off">
@@ -172,7 +171,7 @@
     <div class="segmentos" role="radiogroup"><button type="button" role="radio" aria-checked="true">En español</button><button type="button" role="radio" aria-checked="false">In English</button></div>
     <p class="dialogo-nota">Todo el grupo juega con las mismas palabras y preguntas, en este idioma.</p>
     <a class="dialogo-boton" href="https://apps.apple.com/app/pasati/id6817790043">Crear grupo en la app</a>
-  </form>
+  </div>
 </section>
 </div>
 <footer class="pie">
@@ -183,7 +182,7 @@
     <div><p class="pie-titulo">Contacto</p><ul><li><a href="mailto:pasati@aleclagarde.com">pasati@aleclagarde.com</a></li></ul></div>
   </div>
   <svg class="pie-marca" viewBox="0 0 1000 300" role="img" aria-label="Pasati"><text x="500" y="250" text-anchor="middle" textLength="980" lengthAdjust="spacingAndGlyphs">Pasati</text></svg>
-  <p class="pie-legal">© 2026 Alec Lagarde</p>
+  <p class="pie-legal">© <span data-anio>2026</span> Alec Lagarde</p>
 </footer>
 </div>
 <div lang="en">
@@ -261,7 +260,7 @@
     <article class="hojita hojita-1">
       <h3>Stamps</h3>
       <p>Put your stamp on a friend’s game you liked.</p>
-      <img src="img/grupo-en.jpg" width="520" height="1125" alt="Today’s games with the stamps friends gave them" loading="lazy">
+      <img src="img/sellos-en.jpg" width="520" height="1125" alt="Today’s games with the stamps friends gave them" loading="lazy">
     </article>
     <article class="hojita hojita-2">
       <h3>Medals and trophy case</h3>
@@ -327,7 +326,7 @@
     <h2>Start your group</h2>
     <p>You’ll get a six-letter code to send to your friends.</p>
   </div>
-  <form class="dialogo" data-ui action="https://apps.apple.com/app/pasati/id6817790043" method="get" onsubmit="return false">
+  <div class="dialogo" data-ui>
     <p class="dialogo-titulo">New group</p>
     <label class="dialogo-etiqueta" for="nombre-en">Group name</label>
     <input id="nombre-en" class="dialogo-campo" value="The usual suspects" maxlength="40" autocomplete="off">
@@ -335,7 +334,7 @@
     <div class="segmentos" role="radiogroup"><button type="button" role="radio" aria-checked="false">En español</button><button type="button" role="radio" aria-checked="true">In English</button></div>
     <p class="dialogo-nota">Everyone in the group plays the same words and questions, in this language.</p>
     <a class="dialogo-boton" href="https://apps.apple.com/app/pasati/id6817790043">Create the group in the app</a>
-  </form>
+  </div>
 </section>
 </div>
 <footer class="pie">
@@ -346,7 +345,7 @@
     <div><p class="pie-titulo">Contact</p><ul><li><a href="mailto:pasati@aleclagarde.com">pasati@aleclagarde.com</a></li></ul></div>
   </div>
   <svg class="pie-marca" viewBox="0 0 1000 300" role="img" aria-label="Pasati"><text x="500" y="250" text-anchor="middle" textLength="980" lengthAdjust="spacingAndGlyphs">Pasati</text></svg>
-  <p class="pie-legal">© 2026 Alec Lagarde</p>
+  <p class="pie-legal">© <span data-anio>2026</span> Alec Lagarde</p>
 </footer>
 </div>
 </body>

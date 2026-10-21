@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ster - cronómetro de estudio</title>
 <meta name="description" content="Ster: un cronómetro de estudio para opositores y universitarios que mide el tiempo efectivo y guarda las pausas aparte.">
@@ -25,19 +26,15 @@
 <header class="portada">
   <div class="banda"><h1>Ster</h1></div>
   <nav class="enlaces"><a class="losa" href="../">aleclagarde.com</a><a class="losa" href="#horas-es">Cómo mide</a><a class="losa" href="#cielo-es">El cielo</a><span class="losa losa-ultima"><a href="soporte/">Ayuda</a><span class="idiomas"><a href="?lang=es" data-lang="es">ES</a><a href="?lang=en" data-lang="en">EN</a></span></span></nav>
-  <div class="carril-izq">
-    <div class="losa losa-lema"><img src="icono.png" width="512" height="512" alt=""><p>Mide lo que estudias, no lo que crees. Un cronómetro para opositores y universitarios que cuenta el tiempo efectivo y guarda las pausas aparte.</p></div>
-    <ul class="losa datos"><li>Tiempo efectivo</li><li>Pausas aparte</li><li>Por tema</li><li>Tu mejor hora</li><li>Tu cielo</li></ul>
+  <div class="texto">
+    <div class="losa losa-lema"><img src="icono.png" width="512" height="512" alt=""><p class="lema-corta">Mide lo que estudias, no lo que crees.</p><p>Un cronómetro para opositores y universitarios que cuenta el tiempo efectivo y guarda las pausas aparte.</p>
+      <ul class="datos"><li>Tiempo efectivo</li><li>Pausas aparte</li><li>Por tema</li><li>Tu mejor hora</li><li>Tu cielo</li></ul></div>
+    <ul class="rail"><li class="losa tono-0">Gratis de verdad</li><li class="losa tono-1">Sin anuncios</li><li class="losa tono-2">Para iPhone</li></ul>
+    <div class="botones"><a class="losa accion" href="https://apps.apple.com/app/id6812349526">Descargar en la App Store</a><a class="losa android" href="mailto:ster@aleclagarde.com?subject=Acceso%20a%20Ster%20en%20Android&amp;body=Hola%2C%20quiero%20probar%20Ster%20en%20Android.%20El%20correo%20de%20mi%20cuenta%20de%20Google%20es%3A%20">Pedir acceso para Android</a></div>
   </div>
-  <figure class="foto">
-    <img src="img/cielo-todo.jpg" width="600" height="1321" alt="El cielo de Ster: 198 objetos y 240 horas de estudio">
-  </figure>
-  <div class="carril-der">
-    <p class="losa tono-0">Gratis de verdad</p>
-    <p class="losa tono-1">Sin anuncios</p>
-    <p class="losa tono-2">Para iPhone</p>
-    <a class="losa tono-3 android" href="mailto:ster@aleclagarde.com?subject=Acceso%20a%20Ster%20en%20Android&amp;body=Hola%2C%20quiero%20probar%20Ster%20en%20Android.%20El%20correo%20de%20mi%20cuenta%20de%20Google%20es%3A%20">Pedir acceso para Android</a>
-    <a class="losa accion" href="https://apps.apple.com/app/id6812349526">Descargar en la App Store</a>
+  <div class="pantallas">
+    <figure class="pantalla"><img src="img/pausar.jpg" width="600" height="1321" alt="Una sesión en marcha con los botones de pausar y terminar"></figure>
+    <figure class="pantalla pantalla-2"><img src="img/cielo-todo.jpg" width="600" height="1321" alt="El cielo de Ster: 198 objetos y 240 horas de estudio"></figure>
   </div>
 </header>
 <section class="horas" id="horas-es">
@@ -47,7 +44,13 @@
   </div>
   <div class="horas-cuerpo">
     <article class="hora aparece">
-      <figure><img src="img/pausar.jpg" width="600" height="1321" alt="Una sesión en marcha con los botones de pausar y terminar" loading="lazy"></figure>
+      <div class="crono" data-crono>
+        <p class="crono-titulo">Pruébalo aquí</p>
+        <p class="crono-tiempo" data-tiempo>00:00:00</p>
+        <button type="button" class="crono-boton" data-boton data-empezar="Empezar" data-pausar="Pausar" data-seguir="Seguir">Empezar</button>
+        <p class="crono-cifras"><span data-efectivo>0 s</span> efectivo · <span data-pausa>0 s</span> en pausa · <span data-pausas>0</span> pausas</p>
+        <p class="crono-nota">Si cambias de pestaña, el tiempo se para y cuenta como pausa, como al bloquear el móvil en modo reposo.</p>
+      </div>
       <h3>Tiempo efectivo y pausas, por separado</h3><p>Cada sesión guarda cuánto estuviste concentrado, cuánto en pausa y cuántas veces paraste. De ahí sale tu porcentaje de concentración.</p>
     </article>
     <article class="hora aparece">
@@ -58,22 +61,11 @@
       <figure><img src="img/hora.jpg" width="600" height="1321" alt="La gráfica de concentración por horas y el reparto por asignaturas" loading="lazy"></figure>
       <h3>A qué hora rindes de verdad</h3><p>Con suficientes sesiones, Ster te dice en qué franja del día te concentras más que tu media. No es una opinión: son tus propios datos.</p>
     </article>
-    <aside class="crono aparece" data-crono>
-      <h3>Pruébalo aquí</h3>
-      <p class="crono-tiempo" data-tiempo>00:00:00</p>
-      <button type="button" class="crono-boton" data-boton data-empezar="Empezar" data-pausar="Pausar" data-seguir="Seguir">Empezar</button>
-      <p class="crono-cifras"><span data-efectivo>0 s</span> efectivo · <span data-pausa>0 s</span> en pausa · <span data-pausas>0</span> pausas</p>
-      <p class="crono-nota">Si cambias de pestaña, el tiempo se para y cuenta como pausa, como al bloquear el móvil en modo reposo.</p>
-    </aside>
   </div>
 </section>
 <section class="cielo" id="cielo-es">
-  <div class="cielo-foto aparece">
-    <img src="img/cielo-mes.jpg" width="600" height="1321" alt="Un mes de estudio en el cielo de Ster: 32 objetos" data-vista="0" hidden loading="lazy">
-    <img src="img/cielo-todo.jpg" width="600" height="1321" alt="Todo el cielo: 198 objetos" data-vista="1" loading="lazy">
-  </div>
+  <figure class="cielo-foto aparece"><img src="img/cielo-mes.jpg" width="600" height="1321" alt="Un mes de estudio en el cielo de Ster: 32 objetos" loading="lazy"></figure>
   <div class="cielo-texto">
-    <div class="pestanas" role="tablist"><button type="button" role="tab" data-vista="0" aria-selected="false">Un mes</button><button type="button" role="tab" data-vista="1" aria-selected="true">Todo</button></div>
     <div class="aparece"><h2>Un cielo que se construye estudiando</h2><p>Cada sesión deja algo arriba. Las horas van desbloqueando satélites, planetas, cometas y nebulosas, y tu cielo acaba siendo el dibujo de los meses que llevas.</p></div>
     <div class="acciones"><a class="celda celda-ambar" href="https://apps.apple.com/app/id6812349526">Descargar en la App Store</a><a class="celda" href="mailto:ster@aleclagarde.com?subject=Acceso%20a%20Ster%20en%20Android&amp;body=Hola%2C%20quiero%20probar%20Ster%20en%20Android.%20El%20correo%20de%20mi%20cuenta%20de%20Google%20es%3A%20">Pedir acceso para Android</a></div>
   </div>
@@ -105,7 +97,7 @@
     <div class="pie-enlaces"><p class="pie-titulo">Legal y ayuda</p><ul><li><a href="privacidad/">Privacidad</a></li><li><a href="terminos/">Términos de uso</a></li><li><a href="soporte/">Ayuda y contacto</a></li><li><a href="../legal/">Aviso legal</a></li></ul></div>
     <ul class="pie-enlaces"><li><a href="../">aleclagarde.com</a></li><li><a href="../apps/">Apps</a></li><li><a href="mailto:ster@aleclagarde.com">ster@aleclagarde.com</a></li></ul>
   </div>
-  <p class="pie-legal"><span>© 2026 Alec Lagarde</span></p>
+  <p class="pie-legal"><span>© <span data-anio>2026</span> Alec Lagarde</span></p>
   <p class="pie-marca" aria-hidden="true">Ster</p>
 </footer>
 </div>
@@ -114,19 +106,15 @@
 <header class="portada">
   <div class="banda"><h1>Ster</h1></div>
   <nav class="enlaces"><a class="losa" href="../">aleclagarde.com</a><a class="losa" href="#horas-en">How it measures</a><a class="losa" href="#cielo-en">The sky</a><span class="losa losa-ultima"><a href="soporte/">Help</a><span class="idiomas"><a href="?lang=es" data-lang="es">ES</a><a href="?lang=en" data-lang="en">EN</a></span></span></nav>
-  <div class="carril-izq">
-    <div class="losa losa-lema"><img src="icono.png" width="512" height="512" alt=""><p>Measure what you study, not what you think you did. A study timer that counts your focused time and keeps your breaks apart.</p></div>
-    <ul class="losa datos"><li>Focused time</li><li>Breaks apart</li><li>By topic</li><li>Your best hour</li><li>Your sky</li></ul>
+  <div class="texto">
+    <div class="losa losa-lema"><img src="icono.png" width="512" height="512" alt=""><p class="lema-corta">Measure what you study, not what you think you did.</p><p>A study timer that counts your focused time and keeps your breaks apart.</p>
+      <ul class="datos"><li>Focused time</li><li>Breaks apart</li><li>By topic</li><li>Your best hour</li><li>Your sky</li></ul></div>
+    <ul class="rail"><li class="losa tono-0">Truly free</li><li class="losa tono-1">No ads</li><li class="losa tono-2">For iPhone, in Spanish</li></ul>
+    <div class="botones"><a class="losa accion" href="https://apps.apple.com/app/id6812349526">Download on the App Store</a><a class="losa android" href="mailto:ster@aleclagarde.com?subject=Ster%20on%20Android&amp;body=Hi%2C%20I%27d%20like%20to%20try%20Ster%20on%20Android.%20My%20Google%20account%20email%20is%3A%20">Request Android access</a></div>
   </div>
-  <figure class="foto">
-    <img src="img/cielo-todo.jpg" width="600" height="1321" alt="Ster’s sky: 198 objects and 240 hours of study">
-  </figure>
-  <div class="carril-der">
-    <p class="losa tono-0">Truly free</p>
-    <p class="losa tono-1">No ads</p>
-    <p class="losa tono-2">For iPhone, in Spanish</p>
-    <a class="losa tono-3 android" href="mailto:ster@aleclagarde.com?subject=Ster%20on%20Android&amp;body=Hi%2C%20I%27d%20like%20to%20try%20Ster%20on%20Android.%20My%20Google%20account%20email%20is%3A%20">Request Android access</a>
-    <a class="losa accion" href="https://apps.apple.com/app/id6812349526">Download on the App Store</a>
+  <div class="pantallas">
+    <figure class="pantalla"><img src="img/pausar.jpg" width="600" height="1321" alt="A running session with the pause and finish buttons"></figure>
+    <figure class="pantalla pantalla-2"><img src="img/cielo-todo.jpg" width="600" height="1321" alt="Ster’s sky: 198 objects and 240 hours of study"></figure>
   </div>
 </header>
 <section class="horas" id="horas-en">
@@ -136,7 +124,13 @@
   </div>
   <div class="horas-cuerpo">
     <article class="hora aparece">
-      <figure><img src="img/pausar.jpg" width="600" height="1321" alt="A running session with the pause and finish buttons" loading="lazy"></figure>
+      <div class="crono" data-crono>
+        <p class="crono-titulo">Try it here</p>
+        <p class="crono-tiempo" data-tiempo>00:00:00</p>
+        <button type="button" class="crono-boton" data-boton data-empezar="Start" data-pausar="Pause" data-seguir="Resume">Start</button>
+        <p class="crono-cifras"><span data-efectivo>0 s</span> focused · <span data-pausa>0 s</span> on break · <span data-pausas>0</span> breaks</p>
+        <p class="crono-nota">Switch tabs and the clock stops and counts it as a break, like locking your phone in rest mode.</p>
+      </div>
       <h3>Focus and breaks, kept apart</h3><p>Every session records how long you were focused, how long you paused and how many times you stopped. That gives you your focus rate.</p>
     </article>
     <article class="hora aparece">
@@ -147,22 +141,11 @@
       <figure><img src="img/hora.jpg" width="600" height="1321" alt="The focus-by-hour chart and the split by subject" loading="lazy"></figure>
       <h3>When you really perform</h3><p>With enough sessions, Ster tells you which time of day you focus better than your average. Not an opinion: your own data.</p>
     </article>
-    <aside class="crono aparece" data-crono>
-      <h3>Try it here</h3>
-      <p class="crono-tiempo" data-tiempo>00:00:00</p>
-      <button type="button" class="crono-boton" data-boton data-empezar="Start" data-pausar="Pause" data-seguir="Resume">Start</button>
-      <p class="crono-cifras"><span data-efectivo>0 s</span> focused · <span data-pausa>0 s</span> on break · <span data-pausas>0</span> breaks</p>
-      <p class="crono-nota">Switch tabs and the clock stops and counts it as a break, like locking your phone in rest mode.</p>
-    </aside>
   </div>
 </section>
 <section class="cielo" id="cielo-en">
-  <div class="cielo-foto aparece">
-    <img src="img/cielo-mes.jpg" width="600" height="1321" alt="One month of study in Ster’s sky: 32 objects" data-vista="0" hidden loading="lazy">
-    <img src="img/cielo-todo.jpg" width="600" height="1321" alt="The whole sky: 198 objects" data-vista="1" loading="lazy">
-  </div>
+  <figure class="cielo-foto aparece"><img src="img/cielo-mes.jpg" width="600" height="1321" alt="One month of study in Ster’s sky: 32 objects" loading="lazy"></figure>
   <div class="cielo-texto">
-    <div class="pestanas" role="tablist"><button type="button" role="tab" data-vista="0" aria-selected="false">One month</button><button type="button" role="tab" data-vista="1" aria-selected="true">All of it</button></div>
     <div class="aparece"><h2>A sky built by studying</h2><p>Every session leaves something up there. Your hours unlock moons, planets, comets and nebulae, and your sky ends up as a drawing of the months you’ve put in.</p></div>
     <div class="acciones"><a class="celda celda-ambar" href="https://apps.apple.com/app/id6812349526">Download on the App Store</a><a class="celda" href="mailto:ster@aleclagarde.com?subject=Ster%20on%20Android&amp;body=Hi%2C%20I%27d%20like%20to%20try%20Ster%20on%20Android.%20My%20Google%20account%20email%20is%3A%20">Request Android access</a></div>
   </div>
@@ -194,7 +177,7 @@
     <div class="pie-enlaces"><p class="pie-titulo">Legal and help</p><ul><li><a href="privacidad/">Privacy</a></li><li><a href="terminos/">Terms of use</a></li><li><a href="soporte/">Help and contact</a></li><li><a href="../legal/">Legal</a></li></ul><p class="pie-nota">In Spanish, like the app.</p></div>
     <ul class="pie-enlaces"><li><a href="../">aleclagarde.com</a></li><li><a href="../apps/">Apps</a></li><li><a href="mailto:ster@aleclagarde.com">ster@aleclagarde.com</a></li></ul>
   </div>
-  <p class="pie-legal"><span>© 2026 Alec Lagarde</span></p>
+  <p class="pie-legal"><span>© <span data-anio>2026</span> Alec Lagarde</span></p>
   <p class="pie-marca" aria-hidden="true">Ster</p>
 </footer>
 </div>

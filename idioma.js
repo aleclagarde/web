@@ -7,6 +7,8 @@
   document.documentElement.setAttribute('data-idioma', i);
   document.documentElement.lang = i;
   document.addEventListener('DOMContentLoaded', function () {
+    // El año del pie se pone solo.
+    document.querySelectorAll('[data-anio]').forEach(function (e) { e.textContent = new Date().getFullYear(); });
     // Los enlaces internos conservan el idioma elegido.
     if (p) document.querySelectorAll('a[href]').forEach(function (a) {
       var h = a.getAttribute('href');
