@@ -174,3 +174,44 @@ html.js .entra.visto { opacity: 1; transform: none; }
 .campo a { color: var(--enlace); }
 .fecha.correo { margin-top: 14px; }
 .pantalla-fig { margin: 0; }
+
+/* ── la portada ─────────────────────────────────────────────────────── */
+.nav .descargar { background: var(--oro); color: var(--oro-tinta); font-weight: 600; margin-left: 6px; }
+.nav .descargar:hover { background: var(--oro); color: var(--oro-tinta); filter: brightness(1.06); }
+.portada h1 { font-size: clamp(76px, 13vw, 200px); }
+.portada .lema { max-width: 26ch; }
+.descarga { margin-top: 8px; }
+.descarga .boton { margin-top: 18px; }
+.android { color: var(--luz-2); font-size: 16px; line-height: 1.5; max-width: 42ch; margin: 18px 0 0; }
+.android a { color: var(--oro); font-weight: 600; }
+.boton.secundario { background: transparent; color: var(--luz); box-shadow: inset 0 0 0 3px var(--noche-2); }
+.boton.secundario:hover { box-shadow: inset 0 0 0 3px var(--luz-2); }
+.pasos { list-style: none; padding: 0; margin: 0 0 8px; counter-reset: paso; }
+.pasos li { counter-increment: paso; position: relative; padding-left: 52px; margin: 0 0 18px; max-width: 52ch; }
+.pasos li::before { content: counter(paso); position: absolute; left: 0; top: -2px; width: 36px; height: 36px; border-radius: 50%;
+  background: var(--oro); color: var(--oro-tinta); font: 400 22px/36px var(--titulos); text-align: center; }
+.cifras { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 22px 0 0; padding: 0; list-style: none; max-width: 560px; }
+.cifras li { background: var(--crema); border-radius: 20px; padding: 16px 18px; margin: 0; }
+.hoja .cifras li { background: var(--crema-2); }
+.cifras b { display: block; font: 400 26px/1.1 var(--titulos); margin-bottom: 4px; }
+.cifras span { display: block; font-size: 16px; line-height: 1.4; }
+.cierre { text-align: center; padding-top: clamp(64px, 9vw, 128px); padding-bottom: clamp(24px, 4vw, 48px); }
+.cierre h2 { font: 400 clamp(44px, 7vw, 96px)/1 var(--titulos); margin: 0 0 12px; }
+.cierre .lema { margin: 0 auto; max-width: 34ch; }
+.cierre .android { margin: 18px auto 0; }
+.cierre .banda { width: min(100%, 720px); margin: 40px auto 0; }
+
+/* ── descargar ── */
+.descargar-pag { text-align: center; padding-top: clamp(32px, 8vw, 96px); padding-bottom: clamp(48px, 8vw, 96px); }
+.descargar-pag .icono { width: 120px; height: 120px; border-radius: 28px; margin: 0 auto 24px; }
+.descargar-pag h1 { font: 400 clamp(56px, 10vw, 120px)/.95 var(--titulos); margin: 0 0 16px; }
+.descargar-pag .lema { margin: 0 auto; }
+.descargar-pag .botones { display: flex; flex-direction: column; align-items: center; gap: 0; }
+.descargar-pag .android { margin: 18px auto 0; }
+.descargar-pag .banda { width: min(100%, 640px); margin: 48px auto 0; }
+
+@media (max-width: 520px) {
+  .nav .descargar { display: none; }
+  .cifras { grid-template-columns: 1fr; }
+  .boton { font-size: 21px; padding: 16px 26px; }
+}

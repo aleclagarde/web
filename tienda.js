@@ -12,7 +12,9 @@
     pasati: { nombre: 'Pasati', correo: 'pasati@aleclagarde.com',
       asunto: { es: 'Quiero probar Pasati en Android', en: 'I want to try Pasati on Android' } },
     ster: { nombre: 'Ster', correo: 'ster@aleclagarde.com',
-      asunto: { es: 'Acceso a Ster en Android', en: 'Ster on Android' } }
+      asunto: { es: 'Acceso a Ster en Android', en: 'Ster on Android' } },
+    'cat-heist': { nombre: 'Cat Heist', correo: 'catheist@aleclagarde.com',
+      asunto: { es: 'Quiero probar Cat Heist en Android', en: 'I want to try Cat Heist on Android' } }
   };
   var TX = {
     es: {
@@ -39,11 +41,11 @@
   }
 
   function abrir(enlace) {
-    var app = /\/ster\//.test(location.pathname) ? 'ster' : 'pasati';
+    var app = /\/ster\//.test(location.pathname) ? 'ster' : /\/cat-heist\//.test(location.pathname) ? 'cat-heist' : 'pasati';
     var A = APPS[app];
     var L = document.documentElement.lang === 'en' ? 'en' : 'es';
     var t = TX[L];
-    var raiz = /\/(pasati|ster)\//.exec(location.pathname);
+    var raiz = /\/(pasati|ster|cat-heist)\//.exec(location.pathname);
     var base = raiz ? location.pathname.slice(0, raiz.index + raiz[0].length) : '/' + app + '/';
 
     var d = crear('dialog', 'tienda');
