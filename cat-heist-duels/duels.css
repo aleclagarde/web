@@ -1,0 +1,5 @@
+/* Cat Heist Duels usa la hoja de Cat Heist; aquí solo lo que cambia. */
+.portada h1 { font-size: clamp(60px, 10vw, 150px); line-height: .95; }
+.portada h1 .duels { display: block; color: var(--oro); }
+.cierre.otra { padding-top: 0; }
+.cierre.otra a { color: var(--oro); font-weight: 600; }
